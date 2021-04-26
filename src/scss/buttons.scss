@@ -1,0 +1,81 @@
+.btn {
+  background: none;
+  cursor: pointer;
+  color: $clr-white;
+  border: none;
+  font-size: 16px;
+  font-family: $font-inter;
+  &:hover {
+    border: none;
+  }
+  &-download {
+    background: $clr-blue;
+    @include flex();
+    padding: 8px 22px;
+    &__img {
+      margin-right: 2px;
+    }
+  }
+  &-search {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  &-cart {
+    max-width: 24px;
+    padding: 0;
+  }
+  &-order {
+    padding: 25px 84px;
+    background: #0090d4;
+    border-radius: 100px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &-more {
+    @include flex();
+    &__text {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.01em;
+      margin-right: 13px;
+    }
+    &__arrow {
+      @include wh(36px, 36px);
+      @include flex();
+      background: $clr-white;
+      border-radius: 50%;
+      svg {
+        @include wh(30px, 30px);
+      }
+    }
+  }
+  &-expand {
+    @include flex();
+    padding: 0;
+    @include wh(12px, 6px);
+    &.active {
+      transform: rotate(180deg);
+      svg {
+        path {
+          stroke: $clr-orange;
+        }
+      }
+    }
+  }
+  &-submit-tel {
+    z-index: 5;
+    @include flex();
+    @include wh(240px, 68px);
+    font-weight: 500;
+    font-size: 16px;
+    border-radius: 100px;
+    background: $clr-blue;
+    color: $clr-white;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

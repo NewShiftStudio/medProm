@@ -1,0 +1,24 @@
+.main {
+  background: url("../images/main/bg.png") center no-repeat;
+  background-size: cover;
+  color: $clr-white;
+  padding: 180px 0 141px;
+  &-outer {
+    @include flex(column, flex-start, flex-start, nowrap);
+    max-width: 650px;
+  }
+  &__title {
+    margin: 0 0 20px 0;
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+  }
+  &__subtitle {
+    letter-spacing: -0.02em;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0 0 50px 0;
+  }
+}

@@ -1,0 +1,23 @@
+.manufacturers {
+  padding: 80px 0;
+  .manufacturers-content {
+    @include flex($justify: space-between, $wrap: wrap);
+    .manufacturer {
+      margin-bottom: 20px;
+      @include flex();
+      width: 175px;
+      height: 70px;
+      img {
+        mix-blend-mode: luminosity;
+      }
+      @media (min-width: $size-laptop) {
+        &:hover {
+          cursor: pointer;
+          img {
+            mix-blend-mode: normal;
+          }
+        }
+      }
+    }
+  }
+}

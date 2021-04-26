@@ -1,0 +1,44 @@
+.questions {
+  background: $clr-gray;
+  &__title {
+    text-align: center;
+  }
+  &-outer {
+    padding: 80px 0 300px 0;
+  }
+  .question {
+    @include flex($justify: space-between);
+    cursor: pointer;
+    &-text {
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      line-height: 22px;
+      user-select: none;
+    }
+    &-wrapper {
+      padding: 24px 32px;
+      background: $clr-white;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      transition: 0.2s;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      .answer {
+        transition: 0.2s;
+        overflow: hidden;
+        display: block;
+        height: 0;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        &.active {
+          margin-top: 24px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

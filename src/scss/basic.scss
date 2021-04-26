@@ -1,0 +1,44 @@
+body {
+  font-family: $font-inter;
+  background: $clr-white;
+  color: $clr-dark;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+}
+img {
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: $clr-dark;
+  &:hover {
+    text-decoration: none;
+  }
+}
+.section-title {
+  font-weight: 600;
+  font-size: $title-size-pc;
+  line-height: 45px;
+  color: $clr-dark;
+  margin-bottom: 30px;
+}
+.global-container {
+  overflow: hidden;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: $size-phone) {
+    padding: 0 28px;
+  }
+}
+.basic-link {
+  color: $clr-dark;
+  text-decoration: none;
+  transition: 0.1s;
+  @media (min-width: $size-laptop) {
+    &:hover {
+    }
+  }
+}
