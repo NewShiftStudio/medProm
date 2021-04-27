@@ -16,6 +16,25 @@ a {
     text-decoration: none;
   }
 }
+.router {
+  @include flex($justify: flex-start);
+  color: $clr-white;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 16px;
+  &-from {
+    margin-right: 5px;
+  }
+  &-arrow {
+    margin-right: 5px;
+  }
+}
+.page-title {
+  font-weight: bold;
+  font-size: 46px;
+  letter-spacing: -0.02em;
+  color: $clr-white;
+}
 .section-title {
   font-weight: 600;
   font-size: $title-size-pc;

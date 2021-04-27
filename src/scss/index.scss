@@ -1,16 +1,11 @@
-@import "reset";
-@import "variables";
-@import "basic";
-@import "mixins";
-@import "buttons";
+@import "./shared/reset";
+@import "./shared/variables";
+@import "./shared/mixins";
+@import "./shared/basic";
+@import "./shared/buttons";
 
-@import "header";
-@import "main";
-@import "categories";
-@import "advantages";
-@import "using";
-@import "manufacturers";
-@import "reviews";
-@import "questions";
-@import "form";
-@import "footer";
+@import "./shared/header";
+@import "./shared/footer";
+
+// @import "./home/index.scss";
+@import "./about/index.scss";

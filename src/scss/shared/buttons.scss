@@ -78,4 +78,20 @@
     right: 0;
     top: 0;
   }
+  &-our-offer-arrow {
+    @include flex();
+    @include wh(30px, 30px);
+    padding: 0;
+    margin: 0;
+  }
+  &-download-requisites {
+    @include flex();
+    @include wh(240px, 68px);
+    background: $clr-white;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    border-radius: 100px;
+    color: $clr-blue;
+  }
 }
