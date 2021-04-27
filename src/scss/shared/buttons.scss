@@ -81,7 +81,7 @@
   &-our-offer-arrow {
     @include flex();
     @include wh(30px, 30px);
-    padding: 0;
+    padding: 0 !important;
     margin: 0;
   }
   &-download-requisites {
