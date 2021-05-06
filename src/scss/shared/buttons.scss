@@ -91,7 +91,8 @@
     padding: 0 !important;
     margin: 0;
   }
-  &-download-requisites {
+  &-download-requisites,
+  &-return {
     @include flex();
     @include wh(240px, 68px);
     background: $clr-white;
@@ -100,5 +101,11 @@
     letter-spacing: -0.01em;
     border-radius: 100px;
     color: $clr-blue;
+  }
+  &-return {
+    font-weight: 600;
+    color: $clr-white;
+    line-height: 19px;
+    background: $clr-blue;
   }
 }
