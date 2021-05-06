@@ -9,11 +9,11 @@
   &__block {
     padding: 21px 45px 35px 30px;
     height: 115px;
-    border-bottom: 1px solid #e4e4e4;
+    border-bottom: 1px solid $clr-gray-2;
     width: 50%;
     @include flex($justify: space-between);
     &:nth-of-type(2n) {
-      border-left: 1px solid #e4e4e4;
+      border-left: 1px solid $clr-gray-2;
     }
     &:nth-of-type(5),
     &:nth-of-type(6) {

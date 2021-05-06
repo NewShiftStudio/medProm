@@ -1,0 +1,31 @@
+.main {
+  color: $clr-white;
+  padding: 20px 0 60px 0;
+  background: linear-gradient(0deg, rgba(13, 42, 55, 0.35), rgba(13, 42, 55, 0.35)),
+    url(../images/delivery-page/main-bg.png) center no-repeat;
+  background-size: cover;
+  &-outer {
+    @include flex(column, flex-start, flex-start);
+    max-width: 600px;
+  }
+  &-router {
+    margin-bottom: 44px;
+    a {
+      color: $clr-white;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  &__subtitle {
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+  }
+}

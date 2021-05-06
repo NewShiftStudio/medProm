@@ -1,0 +1,60 @@
+.how {
+  padding-top: 80px;
+  &__title {
+    margin-bottom: 30px;
+    color: $clr-dark;
+    line-height: 44px;
+    letter-spacing: -0.02em;
+    font-weight: bold;
+  }
+  &-cards {
+    @include flex($justify: space-between, $align: flex-start, $wrap: wrap);
+    overflow-y: visible;
+  }
+  &__card {
+    position: relative;
+    @include flex(column, $justify: flex-end, $align: flex-start);
+    min-height: 258px;
+    padding: 0 0 30px 30px;
+    border-radius: 20px;
+    background: linear-gradient(0deg, #ffffff, #ffffff), $clr-gray-2;
+    border: 2px solid $clr-gray-2;
+    overflow: hidden;
+    max-width: 585px;
+    width: 100%;
+    .card {
+      &-title {
+        margin-bottom: 10px;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+      }
+      &-subtitle {
+        letter-spacing: -0.01em;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      &-img {
+        position: absolute;
+      }
+    }
+    &:nth-of-type(1) {
+      .card-img {
+        @include wh(422px, 248px);
+        right: -28px;
+        top: -21px;
+      }
+    }
+    &:nth-of-type(2) {
+      overflow: visible;
+      .card-img {
+        z-index: 2;
+        @include wh(292px, 290px);
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
