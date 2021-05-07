@@ -7,8 +7,7 @@ let path = {
     js: projectFolder + '/js/',
     fonts: projectFolder + '/fonts/',
     img: projectFolder + '/src/images/',
-    pdf: projectFolder + '/documents/',
-    xlsx: projectFolder + '/documents/',
+    documents: projectFolder + '/src/documents/',
   },
   src: {
     html: srcFolder + '/html/pages/*.html',
@@ -16,15 +15,14 @@ let path = {
     js: srcFolder + '/js/*.js',
     img: srcFolder + '/images/**/*.{jpg,png,svg,gif,ico,webp,sprite}',
     fonts: srcFolder + '/fonts/*.ttf',
-    pdf: srcFolder + '/documents/',
-    xlsx: srcFolder + '/documents/',
+    documents: srcFolder + '/documents/*.{pdf,xlsx}',
   },
   watch: {
     html: srcFolder + '/**/*.html',
     css: srcFolder + '/scss/**/*.scss',
     js: srcFolder + '/js/**/*.js',
     img: srcFolder + '/images/**/*.{jpg,png,svg,gif,ico,webp,sprite}',
-    documents: srcFolder + '/documents/*.{xlsx,pdf}',
+    documents: srcFolder + '/documents/*.{pdf,xlsx}',
   },
   clean: './' + projectFolder + '/',
 }
@@ -37,8 +35,7 @@ let { src, dest } = require('gulp'),
   scss = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
   group_media = require('gulp-group-css-media-queries'),
-  clean_css = require('gulp-clean-css'),
-  imagemin = require('gulp-imagemin')
+  clean_css = require('gulp-clean-css')
 function browserSync() {
   browsersync.init({
     server: {
@@ -74,6 +71,11 @@ function js() {
 function images() {
   return src(path.src.img).pipe(dest(path.build.img)).pipe(browsersync.stream())
 }
+function documents() {
+  return src(path.src.documents)
+    .pipe(dest(path.build.documents))
+    .pipe(browsersync.stream())
+}
 
 function css() {
   return src(path.src.css)
@@ -93,10 +95,14 @@ function css() {
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream())
 }
-let build = gulp.series(clearDist, gulp.parallel(js, images, css, html))
+let build = gulp.series(
+  clearDist,
+  gulp.parallel(js, images, documents, css, html)
+)
 let watch = gulp.parallel(build, trackChanges, browserSync)
 
 exports.js = js
+exports.documents = documents
 exports.css = css
 exports.images = images
 exports.html = html
