@@ -1,3 +1,5 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
 .delivery {
   &-blocks {
     @include flex($justify: space-between, $wrap: wrap);

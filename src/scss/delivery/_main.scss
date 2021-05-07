@@ -1,8 +1,10 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
 .main {
   color: $clr-white;
   padding: 20px 0 60px 0;
   background: linear-gradient(0deg, rgba(13, 42, 55, 0.35), rgba(13, 42, 55, 0.35)),
-    url(../images/delivery-page/main-bg.png) center no-repeat;
+    url("/src/images/delivery-page/main-bg.png") center no-repeat;
   background-size: cover;
   &-outer {
     @include flex(column, flex-start, flex-start);

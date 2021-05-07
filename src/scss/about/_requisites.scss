@@ -1,9 +1,11 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
 .requisites {
   padding-bottom: 80px;
   &-outer {
     @include flex($justify: space-between);
     width: 100%;
-    background: $clr-blue url(images/about-page/requisites/requisites-bg.png) center no-repeat;
+    background: $clr-blue url("/src/images/about-page/requisites/requisites-bg.png") center no-repeat;
     background-size: cover;
     border-radius: 20px;
     padding: 70px 50px;

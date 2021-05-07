@@ -1,9 +1,10 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
 .main {
   padding: 20px 0 78px;
   position: relative;
   z-index: 0;
-  background: url(images/about-page/main/main-bg.png) center no-repeat;
-
+  background: url("/src/images/about-page/main/main-bg.png") center no-repeat;
   background-size: cover;
   &:after {
     position: absolute;
@@ -13,17 +14,21 @@
     z-index: 1;
     width: 100%;
     height: 100%;
-    background: rgba(#0d2a37, 35%);
+    background: rgba(#0d2a37, 0.35);
   }
   &-outer {
     position: relative;
     z-index: 2;
     @include flex(column, flex-start, flex-start);
-    max-width: 600px;
+    max-width: 500px;
     color: $clr-white;
   }
   &-router {
     margin-bottom: 144px;
+    color: $clr-white;
+    a {
+      color: $clr-white;
+    }
   }
   &__title {
     margin-bottom: 20px;

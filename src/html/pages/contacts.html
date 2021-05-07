@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/contacts/index.contacts.css" />
+    <title>МедПром</title>
+  </head>
+  <body>
+    <div class="global-container">
+      @@include('../parts/header.html')
+
+      <section class="contacts">
+        <div class="container contacts-container">
+          <div class="contacts-outer">
+            <div class="router contacts-router">
+              <a class="router-from">Главная</a>
+              <div class="router-arrow">></div>
+              <a class="router-to">Контакты</a>
+            </div>
+            <h1 class="contacts__title">Контакты</h1>
+            <div class="contacts-info-blocks">
+              <div class="contacts-info__block">
+                <div class="contact-name">Телефон</div>
+                <div class="contact">+7 (812) 317-79-06</div>
+              </div>
+              <div class="contacts-info__block">
+                <div class="contact-name">Email</div>
+                <div class="contact">info@medpromspb.ru</div>
+              </div>
+              <div class="contacts-info__block">
+                <div class="contact-name">Адрес</div>
+                <div class="contact">
+                  Санкт-Петербург, Малая Митрофаньевская ул., 4Д, пом. 201
+                  <a
+                    class="watch-on-map"
+                    href="https://yandex.ru/maps/-/CCUYjGh62D"
+                  >
+                    Смотреть на карте
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000.5808409736026!2d30.314137358371767!3d59.896265940773475!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630688a70b121%3A0x374a5f6f5ca055b9!2z0JzQsNC70LDRjyDQnNC40YLRgNC-0YTQsNC90YzQtdCy0YHQutCw0Y8g0YPQuy4sIDTQtCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5ODA5NQ!5e0!3m2!1sru!2sru!4v1620232145649!5m2!1sru!2sru"
+                width="100%"
+                height="460"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('../parts/footer.html')
+    </div>
+  </body>
+</html>
