@@ -5,6 +5,9 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
+  &.locked {
+    overflow: hidden;
+  }
 }
 img {
   max-width: 100%;
@@ -52,7 +55,7 @@ a {
   max-width: 1200px;
   margin: 0 auto;
   @media (max-width: $size-phone) {
-    padding: 0 28px;
+    padding: 0 20px;
   }
 }
 .basic-link {

@@ -15,16 +15,46 @@
     &__img {
       margin-right: 2px;
     }
+    &.mobile {
+      width: 100%;
+      margin-top: 40px;
+      color: $clr-white;
+      padding: 17px 0;
+      a {
+        @include flex();
+        width: 100%;
+        color: $clr-white;
+        letter-spacing: -0.02em;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+      }
+      .btn-download__img {
+        @include wh(30px, 30px);
+        margin-right: 2px;
+      }
+    }
   }
   &-search {
     padding: 0;
-    width: 24px;
-    height: 24px;
+    @include wh(24px, 24px);
     margin-right: 10px;
+    &.mobile {
+      opacity: 0.3;
+    }
   }
   &-cart {
     max-width: 24px;
     padding: 0;
+    &.mobile {
+      @include flex();
+      opacity: 0.3;
+      max-width: none;
+      @include wh(30px, 30px);
+      .btn-cart__img {
+        width: 100%;
+      }
+    }
   }
   &-order,
   &-fill-form {
@@ -107,5 +137,64 @@
     color: $clr-white;
     line-height: 19px;
     background: $clr-blue;
+  }
+  &-burger {
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include wh(20px, 15px);
+    box-sizing: border-box;
+    opacity: 0.3;
+
+    span,
+    span:after,
+    span:before {
+      border-radius: 10px;
+      display: block;
+      background: $clr-dark;
+      content: "";
+      @include wh(100%, 3px);
+    }
+    span {
+      position: relative;
+      &:after,
+      &:before {
+        position: absolute;
+        left: calc(50% - 10px);
+        top: calc(50% - 1.5px);
+      }
+      &:after {
+        transition: 0.5s;
+        margin-top: 7.5px;
+      }
+      &:before {
+        transition: 0.5s;
+        margin-top: -7.5px;
+      }
+    }
+    &.burger-close {
+      margin-bottom: 27px;
+      opacity: 1;
+      @include wh(25px, 15px);
+      span {
+        @include wh(100%, 3px);
+        transform: rotate(-135deg);
+        &:after,
+        &:before {
+          left: calc(50% - 12.5px);
+          top: calc(50% - 1.5px);
+        }
+      }
+
+      span::after {
+        margin: 0;
+        transform: rotate(270deg);
+      }
+      span::before {
+        display: none;
+      }
+    }
   }
 }
