@@ -1,0 +1,119 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
+.phone-form {
+  padding: 80px 0;
+  position: relative;
+  background: linear-gradient(to bottom, $clr-gray 50%, $clr-white 50%);
+  &__title {
+    margin-bottom: 10px;
+    @media (max-width: $size-phone) {
+      text-align: center;
+      font-weight: bold;
+      line-height: 36px;
+      font-size: 30px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    color: $clr-dark;
+    @media (max-width: $size-phone) {
+      text-align: center;
+      max-width: 226px;
+      margin: 0 auto 24px auto;
+    }
+  }
+  &-outer {
+    position: relative;
+    z-index: 1;
+    height: 324px;
+    overflow: visible;
+    width: 100%;
+    background: $clr-white;
+    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    @include flex($justify: space-between);
+    padding: 70px 90px 35px 50px;
+    @media (max-width: $size-phone) {
+      padding: 30px 10px 20px;
+      height: auto;
+    }
+  }
+  &__img {
+    max-width: 612px;
+    position: absolute;
+    right: 89px;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    @media (max-width: $size-phone) {
+      display: none;
+    }
+  }
+  &-input-wrapper {
+    position: relative;
+    width: 550px;
+    z-index: 0;
+    .tel-input {
+      z-index: 1;
+      width: 100%;
+      background: $clr-gray;
+      border-radius: 100px;
+      border: 1px solid #dbdbdb;
+      padding: 24px 245px 24px 30px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.01em;
+      color: #919192;
+      @media (max-width: $size-phone) {
+        padding: 25px;
+        text-align: center;
+      }
+    }
+    @media (max-width: $size-phone) {
+      width: 100%;
+      @include flex(column, flex-start, flex-start);
+    }
+  }
+  &-checkbox-wrapper {
+    margin-top: 15px;
+    cursor: pointer;
+    width: fit-content;
+    @include flex($justify: flex-start);
+    .checkbox {
+      @include wh(0, 0);
+      &-fake {
+        @include flex();
+        border-radius: 4px;
+        border: 1px solid $clr-gray-2;
+        background: $clr-white;
+        margin-right: 10px;
+        left: 0;
+        top: 0;
+        @include wh(24px, 24px);
+        min-height: 24px;
+        min-width: 24px;
+        &.active {
+          .checkbox-check {
+            display: block;
+            @include wh(15px, 12px);
+          }
+        }
+      }
+      &-check {
+        display: none;
+        @include wh(15px, 12px);
+      }
+      &-text {
+        user-select: none;
+        opacity: 0.5;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: -0.01em;
+      }
+    }
+  }
+}

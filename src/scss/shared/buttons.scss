@@ -58,11 +58,16 @@
   }
   &-order,
   &-fill-form {
-    padding: 25px 84px;
+    @include flex();
+    @include wh(240px, 68px);
     background: #0090d4;
     border-radius: 100px;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 16px;
+    @media (max-width: $size-phone) {
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
   }
   &-fill-form {
     padding: 25px 49px;
@@ -86,6 +91,7 @@
       border-radius: 50%;
       svg {
         @include wh(30px, 30px);
+        stroke: $clr-blue;
       }
     }
   }
@@ -114,6 +120,11 @@
     position: absolute;
     right: 0;
     top: 0;
+    @media (max-width: $size-phone) {
+      position: static;
+      margin-top: 15px;
+      @include wh(100%, 71px);
+    }
   }
   &-our-offer-arrow {
     @include flex();

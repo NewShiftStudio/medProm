@@ -78,6 +78,7 @@
     display: none;
   }
   @media (max-width: $size-phone) {
+    z-index: 9;
     position: fixed;
     width: 100%;
     &-outer {
@@ -88,7 +89,7 @@
       background: $clr-white;
       position: relative;
       display: block;
-      z-index: 3;
+      z-index: 9;
       .info-blocks {
         .info__block {
           @include flex($justify: flex-start);
@@ -116,7 +117,7 @@
         position: absolute;
         overflow-y: scroll;
         background: $clr-white;
-        z-index: 5;
+        z-index: 11;
         padding-top: 27px;
         .burger {
           &-container {

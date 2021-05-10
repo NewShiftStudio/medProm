@@ -4,6 +4,12 @@
   padding: 80px 0 0 0;
   &__title {
     max-width: 420px;
+    @media (max-width: $size-phone) {
+      max-width: 100%;
+      margin-bottom: 40px;
+      font-size: 36px;
+      letter-spacing: -0.01em;
+    }
   }
   &-content {
     @include flex(row, flex-start, center, wrap);
@@ -13,20 +19,32 @@
     width: 540px;
     margin-right: 60px;
     margin-bottom: 30px;
-    &:nth-of-type(5) {
-      margin-bottom: 0;
-    }
-    &:nth-of-type(6) {
-      margin-bottom: 0;
+    @media (min-width: $size-laptop) {
+      &:nth-of-type(5) {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(6) {
+        margin-bottom: 0;
+      }
     }
     &__img {
       margin-right: 20px;
       @include wh(80px, 80px);
+      @media (max-width: $size-phone) {
+        @include wh(70px, 70px);
+      }
     }
     &__text {
       font-size: 18px;
       letter-spacing: -0.02em;
       font-weight: 600;
+    }
+    @media (max-width: $size-phone) {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      margin-right: 0;
+      width: 100%;
     }
   }
 }

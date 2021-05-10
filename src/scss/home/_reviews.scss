@@ -2,11 +2,25 @@
   padding: 80px 0 0 0;
   background: $clr-gray;
   &-content {
+    @media (max-width: $size-phone) {
+      display: none;
+    }
     padding: 0 0 70px 0;
     border-bottom: 1px solid #e3e3e3;
     @include flex($justify: space-between);
     .review {
       max-width: 370px;
+    }
+  }
+  &-content-slider {
+    @media (min-width: $size-laptop) {
+      display: none;
+    }
+    .review {
+      @media (max-width: $size-phone) {
+        height: 370px;
+        @include flex();
+      }
     }
   }
 }

@@ -4,6 +4,14 @@
   padding: 80px 0 0 0;
   &-cards {
     @include flex(row, space-between, center, wrap);
+    @media (max-width: $size-phone) {
+      display: none;
+    }
+  }
+  &-title {
+    @media (max-width: $size-phone) {
+      margin-bottom: 23px;
+    }
   }
   &__card {
     background-size: cover;
@@ -17,26 +25,28 @@
     &.big {
       flex-basis: 64%;
     }
-    &:nth-of-type(1) {
-      background: url("../../src/images/home-page/categories/bg-1.png") center no-repeat;
-      background-size: cover;
-    }
-    &:nth-of-type(2) {
-      background: url("../../src/images/home-page/categories/bg-2.png") center no-repeat;
-      background-size: cover;
-    }
-    &:nth-of-type(3) {
-      background: url("../../src/images/home-page/categories/bg-3.png") center no-repeat;
-      background-size: cover;
-    }
-    &:nth-of-type(4) {
-      background: url("../../src/images/home-page/categories/bg-4.png") center no-repeat;
-      background-size: cover;
-    }
-    &:nth-of-type(5) {
-      background: url("../../src/images/home-page/categories/bg-5.png") center no-repeat;
-      background-size: cover;
-      margin-bottom: 0;
+    @media (min-width: $size-laptop) {
+      &:nth-of-type(1) {
+        background: url("../../src/images/home-page/categories/bg-1.png") center no-repeat;
+        background-size: cover;
+      }
+      &:nth-of-type(2) {
+        background: url("../../src/images/home-page/categories/bg-2.png") center no-repeat;
+        background-size: cover;
+      }
+      &:nth-of-type(3) {
+        background: url("../../src/images/home-page/categories/bg-3.png") center no-repeat;
+        background-size: cover;
+      }
+      &:nth-of-type(4) {
+        background: url("../../src/images/home-page/categories/bg-4.png") center no-repeat;
+        background-size: cover;
+      }
+      &:nth-of-type(5) {
+        background: url("../../src/images/home-page/categories/bg-5.png") center no-repeat;
+        background-size: cover;
+        margin-bottom: 0;
+      }
     }
     .card {
       &__title {
@@ -57,6 +67,45 @@
               stroke: $clr-white;
             }
           }
+        }
+      }
+    }
+  }
+  &-cards-slider {
+    display: none;
+  }
+  @media (max-width: $size-phone) {
+    &-cards-slider {
+      z-index: 1;
+      display: block;
+    }
+    &__card {
+      z-index: 2;
+      flex-basis: auto;
+      @include wh(280px, 285px);
+      margin-bottom: 0;
+      position: relative;
+      background-size: cover;
+      padding: 0;
+      background-position: center;
+      .card {
+        &-content {
+          padding: 40px 20px 20px 20px;
+          @include flex(column, space-between, flex-start);
+          position: relative;
+          height: 100%;
+          width: 100%;
+          z-index: 4;
+        }
+        &-bg {
+          overflow: hidden;
+          border-radius: 20px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 280px;
+          height: 285px;
+          z-index: 2;
         }
       }
     }
