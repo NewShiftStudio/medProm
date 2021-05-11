@@ -5,6 +5,11 @@
     @include flex(column, flex-start, flex-start);
     margin-right: 40px;
     max-width: 260px;
+    @media (max-width: $size-phone) {
+      max-width: 260px;
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
     &__img {
       max-width: 182px;
       margin-bottom: 15px;
@@ -15,6 +20,9 @@
       letter-spacing: -0.01em;
       color: $clr-dark;
       margin-bottom: 30px;
+      @media (max-width: $size-phone) {
+        margin-bottom: 15px;
+      }
     }
     &-privacy-link {
       padding-bottom: 1px;
@@ -30,11 +38,21 @@
     @include flex(row, space-between, flex-start, wrap);
     max-width: 900px;
     width: 100%;
+    @media (max-width: $size-phone) {
+      margin-top: 0;
+      width: 100%;
+      @include flex(column, flex-start, flex-start);
+      max-width: none;
+    }
   }
   &-outer {
     @include flex(row, flex-start, flex-start, wrap);
     padding: 60px 0;
     border-bottom: 1px solid rgba($clr-dark, 0.1);
+    @media (max-width: $size-phone) {
+      padding: 40px 0;
+      @include flex(column, flex-start, flex-start);
+    }
   }
   &__title {
     color: $clr-dark;
@@ -51,9 +69,17 @@
   }
   &-goods {
     max-width: 221px;
+    @media (max-width: $size-phone) {
+      max-width: 225px;
+      margin-bottom: 40px;
+    }
   }
   &-navigation {
     max-width: 145px;
+    @media (max-width: $size-phone) {
+      max-width: 180px;
+      margin-bottom: 40px;
+    }
   }
   &-nav-btn {
     cursor: pointer;
@@ -89,6 +115,9 @@
       &-tel {
         margin-bottom: 15px;
       }
+    }
+    @media (max-width: $size-phone) {
+      max-width: 280px;
     }
   }
   &-copyright {

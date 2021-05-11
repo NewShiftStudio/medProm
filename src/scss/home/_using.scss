@@ -6,6 +6,10 @@
     @media (min-width: $size-laptop) {
       display: none;
     }
+    .using-card {
+      max-width: 100%;
+      width: 100%;
+    }
   }
   &-cards {
     position: relative;
@@ -24,6 +28,9 @@
   }
   &__title {
     margin-bottom: 10px;
+    @media (max-width: $size-phone) {
+      max-width: 280px;
+    }
   }
   &-card {
     max-width: 360px;
@@ -55,12 +62,18 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
+        @media (max-width: $size-phone) {
+          max-width: 280px;
+        }
       }
       &__text {
         display: block;
         font-size: 16px;
         line-height: 140%;
         letter-spacing: -0.01em;
+        @media (max-width: $size-phone) {
+          max-width: 280px;
+        }
       }
       &__number {
         user-select: none;
@@ -73,6 +86,37 @@
         font-weight: bold;
         font-size: 80px;
         line-height: 97px;
+      }
+    }
+  }
+  &-outer {
+    @media (max-width: $size-phone) {
+      position: relative;
+    }
+  }
+  &-slider-controls {
+    display: none;
+    @media (max-width: $size-phone) {
+      display: flex;
+      max-width: 80px;
+      width: 100%;
+      @include flex($justify: space-between);
+      position: absolute;
+      height: 30px;
+      right: 0;
+      // top: calc(50% - 15px);
+      top: 130px;
+      .next,
+      .prev {
+        z-index: 3;
+        stroke: $clr-blue;
+        @include wh(30px, 30px);
+        &[aria-disabled="true"] {
+          stroke: $clr-gray-2;
+        }
+      }
+      .prev {
+        transform: rotate(180deg);
       }
     }
   }
