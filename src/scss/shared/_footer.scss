@@ -5,7 +5,6 @@
     @include flex(column, flex-start, flex-start);
     margin-right: 40px;
     max-width: 260px;
-
     &__img {
       max-width: 182px;
       margin-bottom: 15px;
@@ -15,11 +14,22 @@
       line-height: 130%;
       letter-spacing: -0.01em;
       color: $clr-dark;
+      margin-bottom: 30px;
+    }
+    &-privacy-link {
+      padding-bottom: 1px;
+      border-bottom: 1px solid #a5a5a5;
+      color: #a5a5a5;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
     }
   }
   &-navigation-wrapper {
+    margin-top: 10px;
     @include flex(row, space-between, flex-start, wrap);
-    width: 900px;
+    max-width: 900px;
+    width: 100%;
   }
   &-outer {
     @include flex(row, flex-start, flex-start, wrap);
