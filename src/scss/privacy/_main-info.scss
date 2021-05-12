@@ -1,0 +1,94 @@
+.main-info {
+  margin-bottom: 80px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &__title {
+    margin-bottom: 30px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    @media (max-width: $size-phone) {
+      font-size: 22px;
+      line-height: normal;
+    }
+  }
+  &__text {
+    @media (max-width: $size-phone) {
+      font-size: 14px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+    }
+  }
+  &_2 {
+    .main-info {
+      &__subtitle {
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        @media (max-width: $size-phone) {
+          font-size: 16px;
+          line-height: 19px;
+          letter-spacing: -0.01em;
+        }
+      }
+      &-list {
+        &__item {
+          padding-left: 40px;
+          position: relative;
+          margin-bottom: 20px;
+          @media (max-width: $size-phone) {
+            padding-left: 30px;
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+          }
+          &:before,
+          &:after {
+            display: block;
+            @include wh(20px, 20px);
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            @media (max-width: $size-phone) {
+              @include wh(16px, 16px);
+            }
+          }
+          &:after {
+            top: 0;
+            border: 1px solid $clr-black;
+            left: 0;
+          }
+          &:before {
+            background: $clr-orange;
+            left: 2px;
+            top: 2px;
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &_3 {
+    .main-info {
+      &-part {
+        margin-bottom: 80px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        @media (max-width: $size-phone) {
+          &__subtitle {
+            font-size: 14px;
+            line-height: 140%;
+            letter-spacing: -0.01em;
+          }
+        }
+      }
+    }
+  }
+}

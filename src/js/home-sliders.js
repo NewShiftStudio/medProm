@@ -3,8 +3,10 @@ var categoriesSlider = tns({
   items: 1,
   controls: false,
   nav: false,
+  fixedWidth: 280,
   gutter: 10,
   loop: false,
+  edgePadding: 20,
 })
 var howToSlider = tns({
   container: '.using-cards-slider',

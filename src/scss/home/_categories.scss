@@ -83,11 +83,12 @@
       z-index: 2;
       flex-basis: auto;
       @include wh(280px, 285px);
+      min-width: none;
+      min-height: none;
       margin-bottom: 0;
+      @include flex(row, flex-start, flex-start);
       position: relative;
-      background-size: cover;
       padding: 0;
-      background-position: center;
       .card {
         &-content {
           padding: 40px 20px 20px 20px;
@@ -95,7 +96,7 @@
           position: relative;
           height: 100%;
           width: 100%;
-          max-width: 280px;
+          width: 280px;
           z-index: 4;
         }
         &-bg {
