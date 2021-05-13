@@ -48,6 +48,9 @@
     bottom: 0;
     z-index: 1;
     pointer-events: none;
+    @media (max-width: $size-laptop) {
+      display: none;
+    }
     @media (max-width: $size-phone) {
       display: none;
     }

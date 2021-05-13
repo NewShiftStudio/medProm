@@ -13,8 +13,9 @@
     }
   }
   &-content-slider {
-    @media (min-width: $size-laptop) {
-      display: none;
+    display: none;
+    @media (max-width: $size-phone) {
+      display: block;
     }
     .review {
       @media (max-width: $size-phone) {

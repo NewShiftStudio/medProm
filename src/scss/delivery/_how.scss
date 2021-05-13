@@ -2,6 +2,7 @@
 @import "../shared/variables.scss";
 .how {
   padding-top: 80px;
+
   &__title {
     margin-bottom: 30px;
     color: $clr-dark;
@@ -12,6 +13,9 @@
   &-cards {
     @include flex($justify: space-between, $align: flex-start, $wrap: wrap);
     overflow-y: visible;
+    @media (max-width: $size-phone) {
+      overflow-y: hidden;
+    }
   }
   &__card {
     position: relative;
@@ -24,6 +28,11 @@
     overflow: hidden;
     max-width: 585px;
     width: 100%;
+    @media (max-width: $size-phone) {
+      padding: 0 0 20px 0;
+      justify-content: flex-start;
+      @include wh(280px, 262px);
+    }
     .card {
       &-title {
         margin-bottom: 10px;
@@ -31,17 +40,40 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 29px;
+        @media (max-width: $size-phone) {
+          margin-bottom: 5px;
+          padding-left: 20px;
+          font-size: 22px;
+          line-height: 27px;
+        }
       }
       &-subtitle {
         letter-spacing: -0.01em;
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
+        @media (max-width: $size-phone) {
+          padding-left: 20px;
+          letter-spacing: -0.01em;
+          font-size: 14px;
+          line-height: 140%;
+        }
       }
       &-img {
         pointer-events: none;
         border-radius: 20px;
         position: absolute;
+        &_mobile {
+          display: none;
+        }
+        @media (max-width: $size-phone) {
+          display: none;
+          &_mobile {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
       }
     }
     &:nth-of-type(1) {
@@ -49,6 +81,19 @@
         @include wh(422px, 248px);
         right: -28px;
         top: -21px;
+        @media (max-width: $size-phone) {
+          &_mobile {
+            @include wh(348px, 204px);
+            left: -43px;
+            top: -33px;
+            max-width: none;
+            position: absolute;
+          }
+        }
+      }
+      @media (max-width: $size-phone) {
+        margin-bottom: 20px;
+        padding-top: 176px;
       }
     }
     &:nth-of-type(2) {
@@ -58,6 +103,12 @@
         @include wh(292px, 290px);
         right: 0;
         bottom: 0;
+        @media (max-width: $size-phone) {
+          &_mobile {
+            @include wh(250px, 168px);
+            margin-bottom: 18.48px;
+          }
+        }
       }
     }
   }

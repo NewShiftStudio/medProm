@@ -27,8 +27,9 @@
   }
   .manufacturers-content-slider-wrapper {
     position: relative;
-    @media (min-width: $size-laptop) {
-      display: none;
+    display: none;
+    @media (max-width: $size-phone) {
+      display: block;
     }
   }
   @media (max-width: $size-phone) {

@@ -1,140 +1,119 @@
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/delivery/index.delivery.css" />
-    <title>МедПром</title>
-  </head>
-  <body>
-    <div class="global-container">
-      @@include('../parts/header.html')
-      <section class="main">
-        <div class="container main-container">
-          <div class="main-outer">
-            <div class="router main-router">
-              <a class="router-from">Главная</a>
-              <div class="router-arrow">></div>
-              <a class="router-to">Оплата и доставка</a>
-            </div>
-            <h1 class="main__title">Оплата и доставка</h1>
-            <div class="main__subtitle">
-              Мы бесплатно доставляем все заказы, кроме средств для зубной
-              гигиены. Чтобы получить бесплатную доставку этой категории
-              товаров, заполните форму.
-            </div>
-            <button class="btn btn-fill-form">Заполнить форму</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./css/delivery/index.delivery.css" />
+  <title>МедПром</title>
+</head>
+
+<body>
+  <div class="global-container">
+    @@include('../parts/header.html')
+    <section class="main">
+      <div class="container main-container">
+        <div class="main-outer">
+          <div class="router main-router">
+            <a class="router-from">Главная</a>
+            <div class="router-arrow">></div>
+            <a class="router-to">Оплата и доставка</a>
           </div>
+          <h1 class="main__title">Оплата и доставка</h1>
+          <div class="main__subtitle">
+            Мы бесплатно доставляем все заказы, кроме средств для зубной
+            гигиены. Чтобы получить бесплатную доставку этой категории
+            товаров, заполните форму.
+          </div>
+          <button class="btn btn-fill-form">Заполнить форму</button>
         </div>
-      </section>
-      <section class="how">
-        <div class="container how-container">
-          <div class="how-outer">
-            <h2 class="section-title how__title">Как можно оплатить заказ</h2>
-            <div class="how-cards">
-              <div class="how__card">
-                <div class="card-title">Наличный расчет</div>
-                <div class="card-subtitle">в офисе</div>
-                <img
-                  src="./src/images/delivery-page/cash-in-hand.png"
-                  alt=""
-                  class="card-img"
-                />
-              </div>
-              <div class="how__card">
-                <div class="card-title">Безналичный расчет</div>
-                <div class="card-subtitle">перевод на наш расчетный счет</div>
-                <img
-                  src="./src/images/delivery-page/card.png"
-                  alt=""
-                  class="card-img"
-                />
-              </div>
+      </div>
+    </section>
+    <section class="how">
+      <div class="container how-container">
+        <div class="how-outer">
+          <h2 class="section-title how__title">Как можно оплатить заказ</h2>
+          <div class="how-cards">
+            <div class="how__card">
+              <img src="./src/images/delivery-page/cash-in-hand.png" alt="" class="card-img_mobile" />
+              <div class="card-title">Наличный расчет</div>
+              <div class="card-subtitle">в офисе</div>
+              <img src="./src/images/delivery-page/cash-in-hand-mobile.png" alt="" class="card-img" />
+            </div>
+            <div class="how__card">
+              <img src="./src/images/delivery-page/card-mobile.png" alt="" class="card-img_mobile" />
+              <div class="card-title">Безналичный расчет</div>
+              <div class="card-subtitle">перевод на наш расчетный счет</div>
+              <img src="./src/images/delivery-page/card.png" alt="" class="card-img" />
             </div>
           </div>
         </div>
-      </section>
-      <section class="delivery">
-        <div class="container delivery-container">
-          <div class="delivery-outer">
-            <h2 class="delivery-blocks">
-              <div class="delivery__block">
-                <h2 class="section-title delivery__title">Доставка</h2>
-                <div class="delivery__subtitle">
-                  Отправляем заказы со склада в Санкт-Петербурге или Москве в
-                  любую точку России. Сотрудничаем со следующими транспортными
-                  компаниями:
-                  <span>Деловые Линии,</span>
-                  <span>СДЭК,</span>
-                  <span>Скиф-Карго,</span>
-                  <span>ПЭК.</span>
-                </div>
+      </div>
+    </section>
+    <section class="delivery">
+      <div class="container delivery-container">
+        <div class="delivery-outer">
+          <h2 class="delivery-blocks">
+            <div class="delivery__block">
+              <h2 class="section-title delivery__title">Доставка</h2>
+              <div class="delivery__subtitle">
+                Отправляем заказы со склада в Санкт-Петербурге или Москве в
+                любую точку России. Сотрудничаем со следующими транспортными
+                компаниями:
+                <span>Деловые Линии,</span>
+                <span>СДЭК,</span>
+                <span>Скиф-Карго,</span>
+                <span>ПЭК.</span>
               </div>
-              <div class="delivery__block">
-                <div class="delivery-company">
-                  <img
-                    src="../src/images/delivery-page/company-cdek.png"
-                    alt=""
-                    class="delivery-company__img"
-                  />
-                </div>
-                <div class="delivery-company">
-                  <img
-                    src="../src/images/delivery-page/company-delovie.png"
-                    alt=""
-                    class="delivery-company__img"
-                  />
-                </div>
-                <div class="delivery-company">
-                  <img
-                    src="../src/images/delivery-page/company-pek.png"
-                    alt=""
-                    class="delivery-company__img"
-                  />
-                </div>
-                <div class="delivery-company">
-                  <img
-                    src="../src/images/delivery-page/company-skif.png"
-                    alt=""
-                    class="delivery-company__img"
-                  />
-                </div>
+            </div>
+            <div class="delivery__block">
+              <div class="delivery-company">
+                <img src="../src/images/delivery-page/company-cdek.png" alt="" class="delivery-company__img" />
               </div>
-            </h2>
-          </div>
+              <div class="delivery-company">
+                <img src="../src/images/delivery-page/company-delovie.png" alt="" class="delivery-company__img" />
+              </div>
+              <div class="delivery-company">
+                <img src="../src/images/delivery-page/company-pek.png" alt="" class="delivery-company__img" />
+              </div>
+              <div class="delivery-company">
+                <img src="../src/images/delivery-page/company-skif.png" alt="" class="delivery-company__img" />
+              </div>
+            </div>
+          </h2>
         </div>
-      </section>
-      <section class="delivery-period">
-        <div class="container delivery-period-container">
-          <div class="h2 section-title delivery-period__title">
-            Срок доставки
+      </div>
+    </section>
+    <section class="delivery-period">
+      <div class="container delivery-period-container">
+        <div class="h2 section-title delivery-period__title">
+          Срок доставки
+        </div>
+        <div class="delivery-period-cards">
+          <div class="delivery-period__card">
+            <div class="card-title">2–3 дня</div>
+            <div class="card-subtitle">При наличии товара на складе</div>
           </div>
-          <div class="delivery-period-cards">
-            <div class="delivery-period__card">
-              <div class="card-title">2–3 дня</div>
-              <div class="card-subtitle">При наличии товара на складе</div>
+          <div class="delivery-period__card">
+            <div class="card-title">5–7 дней</div>
+            <div class="card-subtitle">
+              При наличии товара на складе поставщика в Москве
             </div>
-            <div class="delivery-period__card">
-              <div class="card-title">5–7 дней</div>
-              <div class="card-subtitle">
-                При наличии товара на складе поставщика в Москве
-              </div>
-            </div>
-            <div class="delivery-period__card">
-              <div class="card-title">более 7 дней</div>
-              <div class="card-subtitle">
-                При доставке оборудования под заказ
-              </div>
+          </div>
+          <div class="delivery-period__card">
+            <div class="card-title">более 7 дней</div>
+            <div class="card-subtitle">
+              При доставке оборудования под заказ
             </div>
           </div>
         </div>
-      </section>
-      @@include('../parts/footer.html')
-    </div>
-  </body>
+      </div>
+    </section>
+    @@include('../parts/footer.html')
+  </div>
+</body>
+
 </html>
