@@ -5,13 +5,11 @@
 @import "../shared/buttons";
 @import "../shared/header";
 @import "../shared/footer";
-@import "./intro";
-@import "./main-info";
+@import "./privacy-styles";
 .privacy-text-wrapper {
-  .container {
-    max-width: 900px;
-  }
+  max-width: 900px;
   padding: 20px 0 80px 0;
+
   font-size: 16px;
   line-height: 140%;
   font-style: normal;
@@ -24,7 +22,7 @@
   }
   @media (max-width: $size-phone) {
     margin-top: 70px;
-    padding: 80px 0;
+    padding: 80px 20px;
   }
 }
 .header {
