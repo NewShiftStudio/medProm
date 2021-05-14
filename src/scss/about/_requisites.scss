@@ -2,6 +2,11 @@
 @import "../shared/variables.scss";
 .requisites {
   padding-bottom: 80px;
+  @media (max-width: $size-phone) {
+    &-container {
+      padding: 0 10px;
+    }
+  }
   &-outer {
     @include flex($justify: space-between);
     width: 100%;
@@ -9,11 +14,22 @@
     background-size: cover;
     border-radius: 20px;
     padding: 70px 50px;
+    @media (max-width: $size-phone) {
+      padding: 60px 30px;
+      background: $clr-blue url("../../src/images/about-page/requisites/requisites-bg-mobile.png") center no-repeat;
+      background-size: cover;
+      @include flex(column, flex-start, flex-start, nowrap);
+    }
   }
   &__title {
     color: $clr-white;
     font-weight: bold;
     font-size: 46px;
     letter-spacing: -0.02em;
+    @media (max-width: $size-phone) {
+      margin-bottom: 30px;
+      font-size: 36px;
+      line-height: 44px;
+    }
   }
 }

@@ -139,6 +139,7 @@
     padding: 0 !important;
     margin: 0;
   }
+
   &-download-requisites,
   &-return {
     @include flex();
@@ -149,6 +150,8 @@
     letter-spacing: -0.01em;
     border-radius: 100px;
     color: $clr-blue;
+    @media (max-width: $size-phone) {
+    }
   }
   &-return {
     font-weight: 600;

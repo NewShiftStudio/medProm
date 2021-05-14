@@ -7,6 +7,9 @@
   }
   &-blocks {
     @include flex($wrap: wrap);
+    @media (max-width: $size-phone) {
+      @include flex(column, flex-start, flex-start);
+    }
   }
   &__block {
     padding: 21px 45px 35px 30px;
@@ -14,12 +17,14 @@
     border-bottom: 1px solid $clr-gray-2;
     width: 50%;
     @include flex($justify: space-between);
-    &:nth-of-type(2n) {
-      border-left: 1px solid $clr-gray-2;
-    }
-    &:nth-of-type(5),
-    &:nth-of-type(6) {
-      border-bottom: 1px solid transparent;
+    @media (min-width: $size-laptop) {
+      &:nth-of-type(2n) {
+        border-left: 1px solid $clr-gray-2;
+      }
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        border-bottom: 1px solid transparent;
+      }
     }
     .block {
       &__title {
@@ -29,7 +34,23 @@
         line-height: 29px;
         letter-spacing: -0.02em;
         color: $clr-dark;
+        @media (max-width: $size-phone) {
+          font-size: 22px;
+          line-height: 27px;
+          max-width: 167px;
+        }
       }
+    }
+    @media (max-width: $size-phone) {
+      border-bottom: 1px solid $clr-gray-2;
+      width: 100%;
+      padding: 0 0 20px 0;
+      height: auto;
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      justify-content: space-between;
     }
   }
 }

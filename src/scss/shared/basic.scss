@@ -54,7 +54,7 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  @media (max-width: $size-phone) {
+  @media (max-width: $size-laptop) {
     padding: 0 20px;
   }
 }

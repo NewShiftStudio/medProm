@@ -2,6 +2,9 @@
 @import "../shared/variables.scss";
 .advantages {
   padding-top: 80px;
+  @media (max-width: $size-phone) {
+    display: none;
+  }
   &-cards {
     @include flex($justify: flex-start, $wrap: wrap, $align: flex-start);
   }
