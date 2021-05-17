@@ -1,61 +1,20 @@
 <svg display="none" xmlns="http://www.w3.org/2000/svg">
-  <symbol
-    id="expand"
-    width="14"
-    height="8"
-    viewBox="0 0 14 8"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      opacity="0.4"
-      d="M13 1L7 7L1 1"
-      stroke=""
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+  <symbol id="expand" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path opacity="0.4" d="M13 1L7 7L1 1" stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
   </symbol>
-  <symbol
-    id="check"
-    width="15"
-    height="12"
-    viewBox="0 0 15 12"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M1.16602 5.99967L5.33268 10.1663L13.666 1.83301"
-      stroke="#FF6F2B"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+  <symbol id="check" width="15" height="12" viewBox="0 0 15 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.16602 5.99967L5.33268 10.1663L13.666 1.83301" stroke="#FF6F2B" stroke-width="2" stroke-linecap="round"
+      stroke-linejoin="round" />
   </symbol>
-  <symbol
-    id="arrow-right"
-    width="30"
-    height="30"
-    viewBox="0 0 30 30"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M6.25 15H23.75"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M18.75 20L23.75 15"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-    <path
-      d="M18.75 10L23.75 15"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+  <symbol id="arrow-right" width="30" height="30" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.25 15H23.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18.75 20L23.75 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M18.75 10L23.75 15" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </symbol>
+  <symbol id="close" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.3">
+      <path d="M22.5 7.5L7.5 22.5" stroke="#2D2D30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M7.5 7.5L22.5 22.5" stroke="#2D2D30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
   </symbol>
 </svg>

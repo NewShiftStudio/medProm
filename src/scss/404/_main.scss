@@ -8,19 +8,38 @@
     font-weight: bold;
     font-size: 46px;
     line-height: 56px;
+    @media (max-width: $size-phone) {
+      max-width: 100%;
+      font-size: 36px;
+      line-height: normal;
+      letter-spacing: -0.02em;
+    }
   }
   &-router {
     margin-bottom: 44px;
     color: $clr-dark;
+    @media (max-width: $size-phone) {
+      display: none;
+    }
   }
   &-blocks {
     @include flex($justify: flex-start, $align: flex-start);
+    @media (max-width: $size-phone) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
   &__block {
     &:first-of-type {
       width: 100%;
       max-width: 433px;
       margin-right: 120px;
+      @media (max-width: $size-phone) {
+        margin-right: 0;
+        max-width: 100%;
+        @include flex($direction: column, $align: flex-start);
+        margin-bottom: 60px;
+      }
     }
   }
   &__subtitle {
@@ -29,12 +48,21 @@
     line-height: 140%;
     letter-spacing: -0.01em;
     margin-bottom: 60px;
+    @media (max-width: $size-phone) {
+      font-size: 16px;
+      line-height: 140%;
+      max-width: 280px;
+      letter-spacing: -0.01em;
+    }
   }
   &__img {
     position: absolute;
-    bottom: -22px;
+    bottom: -15px;
     left: 0;
     @include wh(428px, 428px);
+    @media (max-width: $size-phone) {
+      @include wh(100%, 100%);
+    }
   }
   &-img-wrapper {
     pointer-events: none;
@@ -42,5 +70,13 @@
     position: relative;
     display: flex;
     align-items: flex-end;
+    @media (max-width: $size-phone) {
+      @include wh(320px, 320px);
+      align-items: center;
+    }
+  }
+  @media (max-width: $size-phone) {
+    margin-top: 70px;
+    padding: 80px 0 0 0;
   }
 }

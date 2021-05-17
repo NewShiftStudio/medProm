@@ -9,6 +9,9 @@ body {
     overflow: hidden;
   }
 }
+*::placeholder {
+  font-family: $font-inter;
+}
 img {
   max-width: 100%;
 }

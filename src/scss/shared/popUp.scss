@@ -1,17 +1,31 @@
 @import "../shared/mixins.scss";
 @import "../shared/variables.scss";
-.phone-form {
-  padding: 80px 0;
+.popUp {
+  padding: 60px 30px;
   position: relative;
-  background: linear-gradient(to bottom, $clr-gray 50%, $clr-white 50%);
+  background: $clr-white;
+  box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 600px;
+  position: relative;
+  &-inner {
+    z-index: 1;
+    overflow: visible;
+    width: 100%;
+    background: $clr-white;
+    border-radius: 20px;
+    @include flex(column, flex-start, center);
+  }
+  &-form {
+    @include flex(column, flex-start, center);
+    width: 480px;
+  }
   &__title {
     margin-bottom: 10px;
-    @media (max-width: $size-phone) {
-      text-align: center;
-      font-weight: bold;
-      line-height: 36px;
-      font-size: 30px;
-    }
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.02em;
   }
   &__subtitle {
     margin-bottom: 40px;
@@ -19,28 +33,10 @@
     line-height: 140%;
     letter-spacing: -0.01em;
     color: $clr-dark;
-    @media (max-width: $size-phone) {
-      text-align: center;
-      max-width: 226px;
-      margin: 0 auto 24px auto;
-    }
+    max-width: 420px;
+    text-align: center;
   }
-  &-outer {
-    position: relative;
-    z-index: 1;
-    height: 324px;
-    overflow: visible;
-    width: 100%;
-    background: $clr-white;
-    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-    @include flex($justify: space-between);
-    padding: 70px 90px 35px 50px;
-    @media (max-width: $size-phone) {
-      padding: 30px 10px 20px;
-      height: auto;
-    }
-  }
+
   &__img {
     max-width: 612px;
     position: absolute;
@@ -59,41 +55,37 @@
       display: none;
     }
   }
-  &-input-wrapper {
-    position: relative;
-    width: 550px;
-    z-index: 0;
-    .tel-input {
-      z-index: 1;
-      width: 100%;
-      background: $clr-gray;
-      border-radius: 100px;
-      border: 1px solid #dbdbdb;
+  .tel-input-popUp,
+  .name-input-popUp,
+  .mail-input-popUp {
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+    background: $clr-white;
+    border-radius: 20px;
+    border: 1px solid $clr-gray-2;
+    color: rgba($clr-dark, 0.5);
+    padding: 25px 30px 25px 30px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 15px;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    &::placeholder {
       color: rgba($clr-dark, 0.5);
-      padding: 24px 245px 24px 30px;
       font-weight: 500;
       font-size: 16px;
       line-height: 19px;
       letter-spacing: -0.01em;
-      &::placeholder {
-        color: rgba($clr-dark, 0.5);
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 19px;
-        letter-spacing: -0.01em;
-      }
-      @media (max-width: $size-phone) {
-        padding: 25px;
-        text-align: center;
-      }
-    }
-    @media (max-width: $size-phone) {
-      width: 100%;
-      @include flex(column, flex-start, flex-start);
     }
   }
+  .tel-input-popUp {
+    margin-bottom: 0;
+  }
   &-checkbox-wrapper {
+    align-self: flex-start;
     margin-top: 15px;
+    margin-bottom: 20px;
     cursor: pointer;
     width: fit-content;
     @include flex($justify: flex-start);

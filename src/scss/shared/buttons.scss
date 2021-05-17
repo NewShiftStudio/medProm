@@ -127,6 +127,9 @@
     position: absolute;
     right: 0;
     top: 0;
+    &.btn-submit-tel-popUp {
+      position: static;
+    }
     @media (max-width: $size-phone) {
       position: static;
       margin-top: 15px;
@@ -158,6 +161,17 @@
     color: $clr-white;
     line-height: 19px;
     background: $clr-blue;
+    @media (max-width: $size-phone) {
+      @include wh(280px, 68px);
+    }
+  }
+  &-close-popUp {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    svg {
+      @include wh(30px, 30px);
+    }
   }
   &-burger {
     padding: 0;
