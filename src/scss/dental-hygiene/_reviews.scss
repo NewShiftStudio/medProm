@@ -1,0 +1,42 @@
+.reviews {
+  box-sizing: border-box;
+  background: $clr-gray;
+  padding-top: 80px;
+  &__title {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  &-container {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    .tns-outer {
+      width: 100vw;
+      @include flex();
+    }
+    .tns-ovh {
+      overflow: visible;
+      width: 100vw;
+    }
+    .tns-inner {
+      width: 100vw;
+    }
+  }
+  &-outer {
+    overflow: visible;
+  }
+  &-slider {
+    overflow: visible;
+  }
+  &__slide {
+    @include flex($justify: flex-start);
+    height: 320px;
+    .slide-content {
+      @include wh(435px, 320px);
+      background: $clr-gray-2;
+      @media (max-width: $size-phone) {
+        @include wh(280px, 320px);
+      }
+    }
+  }
+}

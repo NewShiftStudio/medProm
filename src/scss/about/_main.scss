@@ -7,7 +7,7 @@
   background: url("../../src/images/about-page/main/main-bg.png") center no-repeat;
   @media (max-width: $size-phone) {
     margin-top: 70px;
-    padding: 188px 0 80px;
+    padding: 80px 0 188px;
     background: url("../../src/images/about-page/main/main-bg-mobile.png") center no-repeat;
   }
   background-size: cover;
@@ -29,6 +29,8 @@
     color: $clr-white;
   }
   &-router {
+    font-weight: 500;
+
     margin-bottom: 144px;
     color: $clr-white;
     a {

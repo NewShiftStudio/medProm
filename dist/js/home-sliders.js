@@ -33,4 +33,5 @@ var reviewsSlider = tns({
   controls: false,
   nav: false,
   loop: false,
+  mouseDrag: true,
 })

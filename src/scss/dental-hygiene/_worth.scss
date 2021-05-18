@@ -1,0 +1,53 @@
+.worth {
+  &__title {
+    font-weight: bold;
+    max-width: 400px;
+    @media (max-width: $size-phone) {
+      font-size: 30px;
+      line-height: 36px;
+      letter-spacing: -0.02em;
+    }
+  }
+  &-list {
+    @include flex(row, space-between, flex-start, wrap);
+    &__item {
+      padding-left: 40px;
+      position: relative;
+      margin-bottom: 30px;
+      width: 540px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      @media (max-width: $size-phone) {
+        margin-bottom: 20px;
+        padding-left: 30px;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+      }
+      &:before,
+      &:after {
+        display: block;
+        @include wh(20px, 20px);
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        @media (max-width: $size-phone) {
+          @include wh(16px, 16px);
+        }
+      }
+      &:after {
+        top: 0;
+        border: 1px solid $clr-black;
+        left: 0;
+      }
+      &:before {
+        background: $clr-orange;
+        left: 2px;
+        top: 2px;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -170,6 +170,8 @@
             stroke: $clr-dark;
           }
           &-name {
+            width: fit-content;
+            max-width: fit-content;
             &_1 {
               font-weight: 600;
               font-size: 24px;

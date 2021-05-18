@@ -2,25 +2,28 @@
 @import "../shared/variables.scss";
 .main {
   color: $clr-white;
-  padding: 20px 0 60px 0;
+  padding: 20px 0 142px 0;
   background: linear-gradient(0deg, rgba(13, 42, 55, 0.35), rgba(13, 42, 55, 0.35)),
-    url("../../src/images/delivery-page/main-bg.png") center no-repeat;
+    url("../../src/images/dental-hygiene/main-bg.png") center no-repeat;
   background-size: cover;
   @media (max-width: $size-phone) {
     margin-top: 70px;
-    padding: 80px 0 82px 0;
+    padding: 305px 0 80px 0;
     background: linear-gradient(0deg, rgba(13, 42, 55, 0.35), rgba(13, 42, 55, 0.35)),
-      url("../../src/images/delivery-page/main-bg-mobile.png");
+      url("../../src/images/dental-hygiene/main-bg-mobile.png") center no-repeat;
     background-size: cover;
   }
   &-outer {
     @include flex(column, flex-start, flex-start);
-    max-width: 600px;
+    max-width: 900px;
+    @media (max-width: $size-phone) {
+      align-items: center;
+    }
   }
   &-router {
     font-weight: 500;
 
-    margin-bottom: 44px;
+    margin-bottom: 54px;
     a {
       color: $clr-white;
     }
@@ -33,12 +36,22 @@
     font-size: 46px;
     line-height: 56px;
     letter-spacing: -0.02em;
-    margin-bottom: 20px;
+    br:first-of-type {
+      display: none;
+    }
+    br:last-of-type {
+      display: block;
+    }
     @media (max-width: $size-phone) {
-      margin-bottom: 30px;
-      font-size: 36px;
-      line-height: 44px;
-      letter-spacing: -0.02em;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      br:first-of-type {
+        display: block;
+      }
+      br:last-of-type {
+        display: none;
+      }
     }
   }
   &__subtitle {

@@ -9,3 +9,11 @@
   width: $width;
   height: $height;
 }
+@mixin minwh($width: 100px, $height: 100px) {
+  min-width: $width;
+  min-height: $height;
+}
+@mixin maxwh($width: 100px, $height: 100px) {
+  max-width: $width;
+  max-height: $height;
+}

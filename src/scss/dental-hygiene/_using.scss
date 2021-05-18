@@ -1,0 +1,79 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
+.using {
+  padding-bottom: 80px;
+  &-cards {
+    position: relative;
+    @include flex($justify: space-between, $wrap: wrap, $align: flex-start);
+  }
+  &__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    @media (max-width: $size-phone) {
+      max-width: 100%;
+    }
+  }
+  &-card {
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding-top: 62px;
+    @include flex(column, flex-start, flex-start);
+    &:after {
+      position: absolute;
+      z-index: -1;
+    }
+    @media (min-width: $size-laptop) {
+      margin-bottom: 30px;
+      &:nth-of-type(4) {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(5) {
+        margin-bottom: 0;
+        justify-self: flex-start;
+        margin-left: 60px;
+      }
+    }
+    .card {
+      &__title {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        @media (max-width: $size-phone) {
+          font-size: 22px;
+          line-height: 27px;
+          max-width: 280px;
+        }
+      }
+      &__text {
+        display: block;
+        font-size: 16px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        @media (max-width: $size-phone) {
+          max-width: 280px;
+        }
+      }
+      &__number {
+        user-select: none;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $clr-blue;
+        opacity: 0.1;
+        font-weight: bold;
+        font-size: 80px;
+        line-height: 97px;
+      }
+    }
+    @media (max-width: $size-phone) {
+      margin-bottom: 20px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

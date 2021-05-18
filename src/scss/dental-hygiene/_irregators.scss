@@ -1,0 +1,60 @@
+.irregators {
+  padding: 80px 0;
+  overflow: hidden;
+  &-outer {
+    padding: 120px 0 114px 30px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 10px 15px rgba($clr-black, 0.15);
+    background: $clr-gray;
+    border-radius: 20px;
+    @media (max-width: $size-phone) {
+      padding: 40px 36px 20px 20px;
+      overflow: hidden;
+      max-width: 100%;
+    }
+  }
+  &-content {
+    max-width: 510px;
+    .btn-more {
+      &__text {
+        color: $clr-dark;
+        font-weight: bold;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-size: 36px;
+    line-height: normal;
+    letter-spacing: -0.02em;
+    font-weight: bold;
+    @media (max-width: $size-phone) {
+      line-height: 44px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 60px;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.01em;
+    @media (max-width: $size-phone) {
+      margin-bottom: 220px;
+      font-size: 14px;
+    }
+  }
+  &__img {
+    pointer-events: none;
+    position: absolute;
+    @include wh(628px, 628px);
+    @include minwh(628px, 628px);
+    bottom: -37px;
+    right: -34px;
+    @media (max-width: $size-phone) {
+      @include wh(402px, 402px);
+      @include minwh(402px, 402px);
+      bottom: -81px;
+      right: -142px;
+    }
+  }
+}
