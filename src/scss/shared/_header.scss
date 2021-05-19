@@ -166,6 +166,7 @@
           padding: 0;
           &-arrow {
             min-width: 14px;
+            max-width: 14px;
             @include wh(14px, 8px);
             stroke: $clr-dark;
           }
@@ -230,6 +231,7 @@
           &-visible {
             width: 100%;
             @include flex($justify: space-between);
+            flex-wrap: nowrap !important;
           }
           &-wrapper {
             .accordion-visible {

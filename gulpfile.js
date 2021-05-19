@@ -36,6 +36,7 @@ let { src, dest } = require('gulp'),
   autoprefixer = require('gulp-autoprefixer'),
   group_media = require('gulp-group-css-media-queries'),
   clean_css = require('gulp-clean-css')
+clean_css = require('gulp-clean-css')
 function browserSync() {
   browsersync.init({
     server: {
@@ -84,13 +85,13 @@ function css() {
         outputStyle: 'expanded',
       })
     )
-    .pipe(group_media())
     .pipe(
       autoprefixer({
-        overrideBrowserlist: ['last 5 versions'],
-        cascade: true,
+        overrideBrowserslist: ['last 2 versions', 'not dead', '> 0.2%'],
+        cascade: false,
       })
     )
+    .pipe(group_media())
     .pipe(clean_css())
     .pipe(dest(path.build.css))
     .pipe(browsersync.stream())
