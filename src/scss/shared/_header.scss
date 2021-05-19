@@ -164,6 +164,11 @@
         }
         .accordion {
           padding: 0;
+          &-summary {
+            &::marker {
+              content: "";
+            }
+          }
           &-arrow {
             min-width: 14px;
             max-width: 14px;
@@ -218,7 +223,7 @@
             }
           }
           &[open] {
-            & > .accordion-visible {
+            & > .accordion-summary {
               .accordion-arrow {
                 transform: rotate(180deg);
                 color: black;
