@@ -230,7 +230,9 @@
 
           &-visible {
             width: 100%;
-            @include flex($justify: space-between);
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
             flex-wrap: nowrap !important;
           }
           &-wrapper {
