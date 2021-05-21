@@ -58,7 +58,9 @@
     }
   }
   &-order,
-  &-fill-form {
+  &-order-cart,
+  &-fill-form,
+  &-free-ship {
     @include flex();
     @include wh(240px, 68px);
     background: #0090d4;
@@ -68,6 +70,24 @@
     @media (max-width: $size-phone) {
       font-size: 18px;
       letter-spacing: -0.01em;
+    }
+  }
+  &-order-cart {
+    @media (max-width: $size-phone) {
+      @include wh(280px, 68px);
+    }
+  }
+  &-free-ship {
+    font-weight: bold;
+    color: $clr-dark;
+    line-height: 19px;
+    background: transparent;
+    letter-spacing: -0.01em;
+    margin-right: 30px;
+    border: 1px solid $clr-gray-2 !important;
+    @media (max-width: $size-phone) {
+      @include wh(280px, 68px);
+      margin: 0 0 15px;
     }
   }
   &-fill-form {

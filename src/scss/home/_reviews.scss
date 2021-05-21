@@ -1,26 +1,41 @@
 .reviews {
-  padding: 80px 0 0 0;
+  box-sizing: border-box;
   background: $clr-gray;
-  &-content {
-    @media (max-width: $size-phone) {
-      display: none;
+  padding-top: 80px;
+  &__title {
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  &-container {
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    .tns-outer {
+      width: 100vw;
+      @include flex();
     }
-    padding: 0 0 70px 0;
-    border-bottom: 1px solid #e3e3e3;
-    @include flex($justify: space-between);
-    .review {
-      max-width: 370px;
+    .tns-ovh {
+      overflow: visible;
+      width: 100vw;
+    }
+    .tns-inner {
+      width: 100vw;
     }
   }
-  &-content-slider {
-    display: none;
-    @media (max-width: $size-phone) {
-      display: block;
-    }
-    .review {
+  &-outer {
+    overflow: visible;
+  }
+  &-slider {
+    overflow: visible;
+  }
+  &__slide {
+    @include flex($justify: flex-start);
+    height: 320px;
+    .slide-content {
+      @include wh(435px, 320px);
+      background: $clr-gray-2;
       @media (max-width: $size-phone) {
-        height: 370px;
-        @include flex();
+        @include wh(280px, 320px);
       }
     }
   }

@@ -15,7 +15,7 @@
   }
   &-outer {
     @include flex(column, flex-start, flex-start);
-    max-width: 600px;
+    max-width: 500px;
   }
   &-router {
     font-weight: 500;

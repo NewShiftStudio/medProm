@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/404/index.404.css" />
+    <link rel="stylesheet" href="./css/cart/index.cart.css" />
     <title>МедПром</title>
   </head>
 
@@ -320,30 +320,314 @@
   </div>
 </header>
 
-      <div class="global-container">
-        <section class="main">
-          <div class="container main-container">
-            <div class="main-outer">
-              <div class="main-blocks">
-                <div class="main__block">
-                  <div class="router main-router">
-                    <a class="router-from">Главная</a>
-                    <div class="router-arrow">></div>
-                    <a class="router-to">404</a>
+      <div class="page-content-wrapper">
+        <section class="cart">
+          <div class="cart-outer">
+            <div class="container cart-top-container">
+              <div class="router cart-router">
+                <a class="router-from">Главная</a>
+                <div class="router-arrow">></div>
+                <a class="router-to">Корзина</a>
+              </div>
+              <h1 class="cart__title">Корзина</h1>
+            </div>
+            <div class="container cart-bottom-container">
+              <div class="cart-blocks">
+                <div class="cart__block">
+                  <div class="cart-products">
+                    <div class="product">
+                      <div class="product-part">
+                        <div class="product-img-wrapper">
+                          <img
+                            src="./src/images/products/test-product.png"
+                            alt=""
+                            class="product__img"
+                          />
+                        </div>
+                        <div class="product-text">
+                          <a href="" class="product__title">
+                            Фетальные кардиомониторы Team Care Care Duo
+                          </a>
+                          <p class="product-desc">Мониторы пациента</p>
+                        </div>
+                      </div>
+                      <div class="product-part">
+                        <div class="product-amount-selector">
+                          <svg class="amount-reduce">
+                            <use
+                              href="./src/images/icons/sprite.svg#minus"
+                            ></use>
+                          </svg>
+                          <div class="amount-wrapper">
+                            <div class="amount-num">1</div>
+
+                            <span class="amount-text">шт.</span>
+                          </div>
+                          <svg class="amount-increase">
+                            <use
+                              href="./src/images/icons/sprite.svg#plus"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="
+                            product-price-wrapper product-price-unknown-wrapper
+                          "
+                        >
+                          Стоимость по запросу
+                        </div>
+                        <div class="product-delete"><span></span></div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-part">
+                        <div class="product-img-wrapper">
+                          <img
+                            src="./src/images/products/test-product.png"
+                            alt=""
+                            class="product__img"
+                          />
+                        </div>
+                        <div class="product-text">
+                          <a href="" class="product__title">
+                            Фетальные кардиомониторы Team Care Care Duo
+                          </a>
+                          <p class="product-desc">Мониторы пациента</p>
+                        </div>
+                      </div>
+                      <div class="product-part">
+                        <div class="product-amount-selector">
+                          <svg class="amount-reduce">
+                            <use
+                              href="./src/images/icons/sprite.svg#minus"
+                            ></use>
+                          </svg>
+                          <div class="amount-wrapper">
+                            <div class="amount-num">1</div>
+
+                            <span class="amount-text">шт.</span>
+                          </div>
+                          <svg class="amount-increase">
+                            <use
+                              href="./src/images/icons/sprite.svg#plus"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="
+                            product-price-wrapper product-price-unknown-wrapper
+                          "
+                        >
+                          Стоимость по запросу
+                        </div>
+                        <div class="product-delete"><span></span></div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-part">
+                        <div class="product-img-wrapper">
+                          <img
+                            src="./src/images/products/test-product.png"
+                            alt=""
+                            class="product__img"
+                          />
+                        </div>
+                        <div class="product-text">
+                          <a href="" class="product__title">
+                            Фетальные кардиомониторы Team Care Care Duo
+                          </a>
+                          <p class="product-desc">Мониторы пациента</p>
+                        </div>
+                      </div>
+                      <div class="product-part">
+                        <div class="product-amount-selector">
+                          <svg class="amount-reduce">
+                            <use
+                              href="./src/images/icons/sprite.svg#minus"
+                            ></use>
+                          </svg>
+                          <div class="amount-wrapper">
+                            <div class="amount-num">1</div>
+
+                            <span class="amount-text">шт.</span>
+                          </div>
+                          <svg class="amount-increase">
+                            <use
+                              href="./src/images/icons/sprite.svg#plus"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="
+                            product-price-wrapper product-price-unknown-wrapper
+                          "
+                        >
+                          Стоимость по запросу
+                        </div>
+                        <div class="product-delete"><span></span></div>
+                      </div>
+                    </div>
                   </div>
-                  <h1 class="page-title main__title">Упс...</h1>
-                  <p class="main__subtitle">
-                    Кажется, что-то пошло не так. Мы постараемся решить эту
-                    проблему в ближайшее время.
-                  </p>
-                  <button class="btn btn-return">Вернуться на главную</button>
+                  <div class="cart-order">
+                    <button class="btn btn-order-cart">Оформить заказ</button>
+                  </div>
                 </div>
-                <div class="main__block main-img-wrapper">
-                  <img
-                    class="main__img"
-                    src="./src/images/404/girl.png"
-                    alt=""
-                  />
+                <div class="cart__block">
+                  <div class="cart-products">
+                    <div class="product">
+                      <div class="product-part">
+                        <div class="product-img-wrapper">
+                          <img
+                            src="./src/images/products/test-product.png"
+                            alt=""
+                            class="product__img"
+                          />
+                        </div>
+                        <div class="product-text">
+                          <a href="" class="product__title">
+                            Фетальные кардиомониторы Team Care Care Duo
+                          </a>
+                          <p class="product-desc">Мониторы пациента</p>
+                        </div>
+                      </div>
+                      <div class="product-part">
+                        <div class="product-amount-selector">
+                          <svg class="amount-reduce">
+                            <use
+                              href="./src/images/icons/sprite.svg#minus"
+                            ></use>
+                          </svg>
+                          <div class="amount-wrapper">
+                            <div class="amount-num">1</div>
+
+                            <span class="amount-text">шт.</span>
+                          </div>
+                          <svg class="amount-increase">
+                            <use
+                              href="./src/images/icons/sprite.svg#plus"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="
+                            product-price-wrapper product-price-known-wrapper
+                          "
+                        >
+                          <div class="product-price">499 800</div>
+
+                          <span class="product-price-currency">руб.</span>
+                        </div>
+                        <div class="product-delete"><span></span></div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-part">
+                        <div class="product-img-wrapper">
+                          <img
+                            src="./src/images/products/test-product.png"
+                            alt=""
+                            class="product__img"
+                          />
+                        </div>
+                        <div class="product-text">
+                          <a href="" class="product__title">
+                            Фетальные кардиомониторы Team Care Care Duo
+                          </a>
+                          <p class="product-desc">Мониторы пациента</p>
+                        </div>
+                      </div>
+                      <div class="product-part">
+                        <div class="product-amount-selector">
+                          <svg class="amount-reduce">
+                            <use
+                              href="./src/images/icons/sprite.svg#minus"
+                            ></use>
+                          </svg>
+                          <div class="amount-wrapper">
+                            <div class="amount-num">1</div>
+
+                            <span class="amount-text">шт.</span>
+                          </div>
+                          <svg class="amount-increase">
+                            <use
+                              href="./src/images/icons/sprite.svg#plus"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="
+                            product-price-wrapper product-price-known-wrapper
+                          "
+                        >
+                          <div class="product-price">499 800</div>
+
+                          <span class="product-price-currency">руб.</span>
+                        </div>
+                        <div class="product-delete"><span></span></div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-part">
+                        <div class="product-img-wrapper">
+                          <img
+                            src="./src/images/products/test-product.png"
+                            alt=""
+                            class="product__img"
+                          />
+                        </div>
+                        <div class="product-text">
+                          <a href="" class="product__title">
+                            Фетальные кардиомониторы Team Care Care Duo
+                          </a>
+                          <p class="product-desc">Мониторы пациента</p>
+                        </div>
+                      </div>
+                      <div class="product-part">
+                        <div class="product-amount-selector">
+                          <svg class="amount-reduce">
+                            <use
+                              href="./src/images/icons/sprite.svg#minus"
+                            ></use>
+                          </svg>
+                          <div class="amount-wrapper">
+                            <div class="amount-num">1</div>
+
+                            <span class="amount-text">шт.</span>
+                          </div>
+                          <svg class="amount-increase">
+                            <use
+                              href="./src/images/icons/sprite.svg#plus"
+                            ></use>
+                          </svg>
+                        </div>
+                        <div
+                          class="
+                            product-price-wrapper product-price-known-wrapper
+                          "
+                        >
+                          <div class="product-price">499 800</div>
+
+                          <span class="product-price-currency">руб.</span>
+                        </div>
+                        <div class="product-delete"><span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="summary-wrapper">
+                    <span class="summary-text">Итого:</span>
+
+                    <div class="summary">1 499 400</div>
+
+                    <span class="summary-currency">руб.</span>
+                  </div>
+                  <div class="cart-order">
+                    <button class="btn btn-free-ship">
+                      Бесплатная доставка
+                    </button>
+                    <button class="btn btn-order-cart">
+                      Оформить и оплатить
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -1,0 +1,270 @@
+.cart {
+  padding: 20px 0 80px 0;
+  &-router {
+    color: $clr-dark;
+    margin-bottom: 44px;
+  }
+  &-order {
+    @include flex(row, flex-start, flex-start, nowrap);
+    align-self: flex-end;
+    width: fit-content;
+    @media (max-width: $size-phone) {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 46px;
+    line-height: 56px;
+    color: $clr-dark;
+  }
+  &-top-container {
+    margin-bottom: 30px;
+  }
+  &-bottom-container {
+    @media (max-width: $size-phone) {
+      padding: 0 10px;
+    }
+  }
+  &__block {
+    @include flex(column, flex-start, flex-start, nowrap);
+    width: 100%;
+    &:first-of-type {
+      margin-bottom: 100px;
+    }
+    &:last-of-type {
+      @media (max-width: $size-phone) {
+        padding-top: 80px;
+        border-top: 2px solid $clr-gray-2;
+      }
+    }
+  }
+  &-products {
+    @include flex(column, flex-start, flex-start, nowrap);
+    border-top: 1px solid $clr-gray-2;
+    width: 100%;
+    margin-bottom: 40px;
+    @media (max-width: $size-phone) {
+      border: none;
+      margin-bottom: 60px;
+    }
+    .product {
+      border-bottom: 1px solid $clr-gray-2;
+      position: relative;
+      height: 120px;
+      width: 100%;
+      @include flex(row, space-between, center, nowrap);
+      padding-right: 90px;
+      @media (max-width: $size-phone) {
+        border-bottom: 2px solid $clr-gray-2;
+        @include flex(column, flex-start, flex-start, nowrap);
+        height: auto;
+        padding-right: 0;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+      &-price-known-wrapper {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: right;
+        letter-spacing: -0.02em;
+        @media (max-width: $size-phone) {
+          font-size: 22px;
+          line-height: 27px;
+        }
+      }
+      &-price-unknown-wrapper {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.01em;
+        @media (max-width: $size-phone) {
+          font-weight: 600;
+          font-size: 22px;
+          max-width: 129px;
+          line-height: 27px;
+          width: fit-content;
+          text-align: right;
+          letter-spacing: -0.02em;
+        }
+      }
+      &-price {
+        display: inline;
+      }
+      &__title {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: -0.02em;
+        @media (max-width: $size-phone) {
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: -0.02em;
+        }
+      }
+      &-desc {
+        color: #a5a5a5;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.01em;
+      }
+      &-delete {
+        right: 0;
+        padding: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include wh(21px, 21px);
+        box-sizing: border-box;
+        opacity: 0.3;
+        cursor: pointer;
+        @media (max-width: $size-phone) {
+          top: 0;
+        }
+        span,
+        span:after,
+        span:before {
+          border-radius: 10px;
+          display: block;
+          background: $clr-dark;
+          content: "";
+          @include wh(100%, 2px);
+        }
+        span {
+          @include wh(100%, 2px);
+          transform: rotate(-135deg);
+          &:after,
+          &:before {
+            left: calc(50% - 12.5px);
+            top: calc(50% - 1.5px);
+          }
+        }
+
+        span::after {
+          margin: 0;
+          transform: rotate(270deg);
+        }
+        span::before {
+          display: none;
+        }
+      }
+
+      &-part {
+        @include flex(row, space-between, center, nowrap);
+        &:first-of-type {
+          max-width: 600px;
+          @media (max-width: $size-phone) {
+            max-width: 100%;
+            width: 100%;
+            padding-right: 30px;
+            margin-bottom: 20px;
+          }
+        }
+        &:last-of-type {
+          width: 450px;
+          @media (max-width: $size-phone) {
+            width: 100%;
+          }
+        }
+      }
+      &-text {
+        max-width: 260px;
+        @media (max-width: $size-phone) {
+          max-width: fill-available;
+        }
+      }
+      &-img-wrapper {
+        @include wh(300px, 120px);
+        @include flex(row, center, center, nowrap);
+        overflow: hidden;
+        @media (max-width: $size-phone) {
+          @include wh(80px, 80px);
+          margin-right: 10px;
+          @include minwh(80px, 80px);
+        }
+      }
+      &__img {
+        max-height: 120px;
+        @media (max-width: $size-phone) {
+          max-height: 100%;
+        }
+      }
+      &-amount-selector {
+        @include flex(row, space-between, center, nowrap);
+        @include wh(180px, 60px);
+        background: $clr-gray;
+        padding: 0 10px;
+        @media (max-width: $size-phone) {
+          @include wh(120px, 60px);
+          @include minwh(120px, 60px);
+        }
+        .amount {
+          &-reduce,
+          &-increase {
+            cursor: pointer;
+            @include wh(20px, 20px);
+            @include maxwh(20px, 20px);
+            @media (max-width: $size-phone) {
+              @include wh(20px, 20px);
+            }
+          }
+          &-text {
+            @media (max-width: $size-phone) {
+              display: none;
+            }
+          }
+          &-num {
+            display: inline;
+            max-width: fit-content;
+          }
+          &-wrapper {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.01em;
+          }
+        }
+      }
+    }
+  }
+  .summary {
+    display: inline;
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: right;
+      letter-spacing: -0.01em;
+      @media (max-width: $size-phone) {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 27px;
+        text-align: right;
+        letter-spacing: -0.02em;
+      }
+    }
+    &-wrapper {
+      margin-right: 90px;
+      align-self: flex-end;
+      margin-bottom: 30px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      text-align: right;
+      letter-spacing: -0.02em;
+      @media (max-width: $size-phone) {
+        margin: 0 0 60px;
+      }
+    }
+  }
+}

@@ -2,16 +2,15 @@
 @import "../shared/variables.scss";
 .questions {
   background: $clr-gray;
+  padding: 80px 0 0 0;
+  &-outer {
+    border-top: 1px solid #e3e3e3;
+    padding: 80px 0 0 0;
+  }
   &__title {
     text-align: center;
     @media (max-width: $size-phone) {
       text-align: left;
-    }
-  }
-  &-outer {
-    padding: 80px 0 0 0;
-    @media (max-width: $size-phone) {
-      padding: 80px 0 0 0;
     }
   }
   .question {

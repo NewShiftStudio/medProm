@@ -52,7 +52,9 @@ a {
   margin-bottom: 30px;
 }
 .global-container {
+  min-height: 100vh;
   overflow: hidden;
+  @include flex(column, space-between, space-between, nowrap);
 }
 .container {
   max-width: 1200px;
