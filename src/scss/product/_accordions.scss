@@ -1,0 +1,165 @@
+@import "../shared/mixins.scss";
+@import "../shared/variables.scss";
+.accordions {
+  @media (min-width: $size-laptop) {
+    display: none;
+  }
+  &__title {
+    text-align: center;
+    @media (max-width: $size-phone) {
+      text-align: left;
+    }
+  }
+  .accordion {
+    @include flex($justify: space-between);
+    cursor: pointer;
+
+    &-text {
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: -0.02em;
+      line-height: 22px;
+      user-select: none;
+    }
+    &-wrapper {
+      background: $clr-white;
+      transition: 0.2s;
+      position: relative;
+      &:after {
+        position: absolute;
+        top: 0;
+        content: "";
+        left: -20px;
+        @include wh(100vw, 1px);
+        background: $clr-gray-2;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+        &:before {
+          position: absolute;
+          bottom: 0;
+          content: "";
+          left: -20px;
+          @include wh(100vw, 1px);
+          background: $clr-gray-2;
+        }
+      }
+      .desc-mobile {
+        padding-top: 0;
+        display: block;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+      }
+      .features-mobile {
+        max-width: 100%;
+        padding-top: 0;
+        overflow: hidden;
+        @include flex(row, space-between, flex-start, wrap);
+        .product-card_bot__feature {
+          margin-bottom: 30px;
+          padding-left: 30px;
+          position: relative;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          font-size: 14px;
+          width: 100%;
+
+          &:before,
+          &:after {
+            display: block;
+            @include wh(20px, 20px);
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            @media (max-width: $size-phone) {
+              @include wh(16px, 16px);
+            }
+          }
+          &:after {
+            top: 0;
+            border: 1px solid $clr-black;
+            left: 0;
+          }
+          &:before {
+            background: $clr-orange;
+            left: 2px;
+            top: 2px;
+          }
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .equip-mobile {
+        padding-top: 0;
+        max-width: 100%;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        .product-card_bot-equip {
+          &-items {
+            list-style-type: decimal;
+          }
+          &__item {
+            margin: 0 0 0 25.38px;
+            font-size: 14px;
+            line-height: 240%;
+            letter-spacing: -0.01em;
+            max-width: 100%;
+          }
+          &-title {
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 27px;
+            letter-spacing: -0.02em;
+            margin-bottom: 15px;
+          }
+          &__block {
+            max-width: 500px;
+            margin-bottom: 60px;
+            &:last-of-type {
+              margin-bottom: 0;
+            }
+            @include flex(column, flex-start, flex-start, nowrap);
+          }
+        }
+      }
+      .accordion-hidden {
+        transition: 0.2s;
+        overflow: hidden;
+        display: block;
+        height: 0;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        &.active {
+          margin-top: 24px;
+          height: auto;
+        }
+      }
+      @media (max-width: $size-phone) {
+        padding: 15px 0;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+        .accordion {
+          &-text {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: -0.02em;
+          }
+        }
+        .accordion-hidden {
+          font-size: 14px;
+          line-height: 140%;
+          letter-spacing: -0.01em;
+          &.active {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -60,7 +60,8 @@
   &-order,
   &-order-cart,
   &-fill-form,
-  &-free-ship {
+  &-free-ship,
+  &-to-cart {
     @include flex();
     @include wh(240px, 68px);
     background: #0090d4;

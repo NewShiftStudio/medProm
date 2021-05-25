@@ -28,11 +28,16 @@ a {
   font-weight: 600;
   font-size: 13px;
   line-height: 16px;
-  a {
+  &-selector {
     cursor: pointer;
-  }
-  &-from {
     margin-right: 5px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &.disabled {
+      color: $clr-gray-3;
+      pointer-events: none;
+    }
   }
   &-arrow {
     margin-right: 5px;
