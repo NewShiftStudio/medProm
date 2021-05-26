@@ -1,0 +1,125 @@
+.catalog {
+  padding: 40px 0 0 0;
+  &-filters {
+    @include flex($justify: flex-start, $wrap: wrap);
+    margin-bottom: 35px;
+    @media (max-width: $size-phone) {
+      margin-bottom: 40px;
+      @include flex(column, flex-start, flex-start, nowrap);
+    }
+  }
+  &__title {
+    display: none;
+    @media (max-width: $size-phone) {
+      display: block;
+      margin-bottom: 20px;
+      color: $clr-dark;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -0.02em;
+    }
+  }
+  &__filter {
+    cursor: pointer;
+    @include flex();
+    margin-right: 10px;
+    padding: 10px 15px;
+    border-radius: 100px;
+    color: $clr-dark;
+    background: $clr-gray;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    color: #2d2d30;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &.selected {
+      background: $clr-blue;
+      color: $clr-white;
+      .btn-remove-filter {
+        @include flex();
+      }
+    }
+    @media (max-width: $size-phone) {
+      margin-bottom: 10px;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &-cards {
+    position: relative;
+    overflow: hidden;
+    @include flex(row, flex-start, flex-start, wrap);
+    align-items: stretch;
+    margin-bottom: 50px;
+    @media (min-width: $size-laptop) {
+      padding: 0 15px;
+    }
+    @media (max-width: $size-phone) {
+      margin-bottom: 40px;
+      justify-content: center;
+    }
+  }
+  &__card {
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    width: 270px;
+    position: relative;
+    margin-right: 15px;
+    &:nth-of-type(4n) {
+      margin-right: 0;
+    }
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @media (min-width: $size-laptop) {
+      &:after {
+        bottom: 0;
+        left: 0;
+        content: "";
+        position: absolute;
+        @include wh(100vw, 1px);
+        background: #eaeaea;
+      }
+    }
+    @media (max-width: $size-phone) {
+      @include flex(column, flex-start, flex-start, nowrap);
+      margin-right: 0;
+      margin-bottom: 40px;
+      padding-bottom: 0;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    .card {
+      &__title {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+        letter-spacing: -0.02em;
+        color: $clr-dark;
+        display: block;
+        margin-bottom: 5px;
+      }
+      &__type {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.01em;
+        color: $clr-gray-3;
+      }
+      &-img-wrapper {
+        @include flex();
+        @include wh(270px, 180px);
+        @include maxwh(270px, 180px);
+        margin-bottom: 19px;
+      }
+      &__img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+}

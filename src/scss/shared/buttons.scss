@@ -61,7 +61,8 @@
   &-order-cart,
   &-fill-form,
   &-free-ship,
-  &-to-cart {
+  &-to-cart,
+  &-show-more {
     @include flex();
     @include wh(240px, 68px);
     background: #0090d4;
@@ -72,6 +73,9 @@
       font-size: 18px;
       letter-spacing: -0.01em;
     }
+  }
+  &-show-more {
+    margin: 0 auto;
   }
   &-order-cart {
     @media (max-width: $size-phone) {
@@ -193,6 +197,16 @@
     top: 20px;
     svg {
       @include wh(30px, 30px);
+    }
+  }
+  &-remove-filter {
+    display: none;
+    @include wh(17px, 17px);
+    background: $clr-white;
+    border-radius: 50%;
+    margin-right: 5px;
+    svg {
+      @include wh(13px, 13px);
     }
   }
   &-burger {

@@ -122,4 +122,25 @@
       stroke-linejoin="round"
     />
   </symbol>
+  <symbol
+    id="remove-filter"
+    width="13"
+    height="13"
+    viewBox="0 0 13 13"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9.40807 3.5921L3.59229 9.40789"
+      stroke="#0090D4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.59229 3.5921L9.40807 9.40789"
+      stroke="#0090D4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>
