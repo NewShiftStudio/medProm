@@ -1,15 +1,37 @@
 .catalog {
-  padding: 40px 0 0 0;
+  padding: 20px 0 0 0;
+  @media (max-width: $size-phone) {
+    padding: 80px 0 0 0;
+    margin-top: 70px;
+  }
+  &-router {
+    font-weight: 500;
+    color: $clr-dark;
+    margin-bottom: 44px;
+    a {
+      color: $clr-dark;
+    }
+    @media (max-width: $size-phone) {
+      display: none;
+    }
+  }
   &-filters {
     @include flex($justify: flex-start, $wrap: wrap);
     margin-bottom: 35px;
     @media (max-width: $size-phone) {
       margin-bottom: 40px;
-      @include flex($justify: flex-start, $wrap: wrap);
+
+      @media (max-width: $size-phone) {
+        @include flex($justify: flex-start, $wrap: wrap);
+      }
     }
   }
   &__title {
-    display: none;
+    font-size: 46px;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    color: $clr-dark;
+    margin-bottom: 20px;
     @media (max-width: $size-phone) {
       display: block;
       margin-bottom: 20px;
@@ -31,6 +53,7 @@
     font-size: 14px;
     line-height: 17px;
     letter-spacing: -0.01em;
+    color: #2d2d30;
     &:last-of-type {
       margin-right: 0;
     }

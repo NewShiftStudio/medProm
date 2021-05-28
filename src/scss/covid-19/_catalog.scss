@@ -5,7 +5,7 @@
     margin-bottom: 35px;
     @media (max-width: $size-phone) {
       margin-bottom: 40px;
-      @include flex(column, flex-start, flex-start, nowrap);
+      @include flex($justify: flex-start, $wrap: wrap);
     }
   }
   &__title {
@@ -44,8 +44,8 @@
     }
     @media (max-width: $size-phone) {
       margin-bottom: 10px;
-      &:last-of-type {
-        margin-bottom: 0;
+      &:nth-of-type(2) {
+        margin-right: 0;
       }
     }
   }
