@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -8,10 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="./css/medical-equipment/index.medical-equipment.css"
-    />
+    <link rel="stylesheet" href="./css/popup-test/index.popup-test.css" />
     <title>МедПром</title>
   </head>
 
@@ -323,335 +321,45 @@
     </div>
   </div>
 </header>
-
-      <section class="main">
-        <div class="container main-container">
-          <div class="main-outer">
-            <div class="router main-router">
-              <a class="router-selector">Главная</a>
-              <div class="router-arrow">></div>
-              <a class="router-selector">Медицинское оборудование</a>
-            </div>
-            <h1 class="main__title">Медицинское оборудование</h1>
-            <p class="main__subtitle">
-              Мы поставляем оборудование для больниц, медицинских центров и
-              других лечебных учреждений. В каталоге МедПром вы найдете
-              сертифицированные товары для комплексного оснащения кабинетов,
-              санаториев и лабораторий. Предлагаем медицинское оборудование
-              таких производителей, как Ardo Medical AG, Viltechmeda, Samsung,
-              Fisher & Paykel и др.
-            </p>
-          </div>
+ <div class="popUp">
+  <div class="popUp-inner">
+    <button class="btn btn-close-popUp">
+      <svg>
+        <use href="../src/images/icons/sprite.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="section-title popUp__title">Бесплатная доставка</h2>
+    <p class="popUp__subtitle">
+      Заполните эту форму и ваши покупки из раздела зубной гигиены мы отправим
+      бесплатно.
+    </p>
+    <form class="popUp-form" action="">
+      <input placeholder="Имя" type="name" class="name-input-popUp" />
+      <input placeholder="E-mail" type="email" class="mail-input-popUp" />
+      <input
+        placeholder="Номер телефона"
+        type="tel"
+        class="tel-input tel-input-popUp"
+      />
+      <label class="home-checkbox popUp-checkbox-wrapper">
+        <input class="checkbox" type="checkbox" />
+        <div class="checkbox-fake">
+          <svg class="checkbox-check">
+            <use href="../src/images/icons/sprite.svg#check"></use>
+          </svg>
         </div>
-      </section>
-      <section class="catalog">
-        <div class="container catalog-container">
-          <div class="catalog-outer">
-            <h2 class="section-title catalog__title">У нас вы можете купить</h2>
-            <div class="catalog-filters">
-              <div class="catalog__filter">
-                <button class="btn btn-remove-filter">
-                  <svg>
-                    <use
-                      href="./src/images/icons/sprite.svg#remove-filter"
-                    ></use>
-                  </svg>
-                </button>
-                Неонатология
-              </div>
-              <div class="catalog__filter">
-                <button class="btn btn-remove-filter">
-                  <svg>
-                    <use
-                      href="./src/images/icons/sprite.svg#remove-filter"
-                    ></use>
-                  </svg>
-                </button>
-                Ультразвуковая диагностика
-              </div>
-              <div class="catalog__filter">
-                <button class="btn btn-remove-filter">
-                  <svg>
-                    <use
-                      href="./src/images/icons/sprite.svg#remove-filter"
-                    ></use>
-                  </svg>
-                </button>
-                Лабораторное оборудование
-              </div>
-            </div>
-            <div class="catalog-cards">
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-2.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Облучатель-рециркулятор (Дезар-4)
-                </a>
-                <p class="card__type">Рециркуляторы</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-3.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Фетальные кардиомониторы Team Care Care Duo
-                </a>
-                <p class="card__type">Мониторы пациента</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-4.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  MR-850, Fisher & Paykel
-                </a>
-                <p class="card__type">Увлажнители</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-5.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  MR-850, Fisher & Paykel
-                </a>
-                <p class="card__type">Увлажнители</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-6.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Аппарат для ручной вентиляции новорожденных, модель ТОМТУМБ
-                </a>
-                <p class="card__type">Реанимация новорожденных</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-2.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Облучатель-рециркулятор (Дезар-4)
-                </a>
-                <p class="card__type">Рециркуляторы</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-3.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Фетальные кардиомониторы Team Care Care Duo
-                </a>
-                <p class="card__type">Мониторы пациента</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-4.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  MR-850, Fisher & Paykel
-                </a>
-                <p class="card__type">Увлажнители</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-5.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  MR-850, Fisher & Paykel
-                </a>
-                <p class="card__type">Увлажнители</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-6.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Аппарат для ручной вентиляции новорожденных, модель ТОМТУМБ
-                </a>
-                <p class="card__type">Реанимация новорожденных</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-2.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Облучатель-рециркулятор (Дезар-4)
-                </a>
-                <p class="card__type">Рециркуляторы</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-3.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Фетальные кардиомониторы Team Care Care Duo
-                </a>
-                <p class="card__type">Мониторы пациента</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-4.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  MR-850, Fisher & Paykel
-                </a>
-                <p class="card__type">Увлажнители</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-5.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  MR-850, Fisher & Paykel
-                </a>
-                <p class="card__type">Увлажнители</p>
-              </div>
-              <div class="catalog__card">
-                <div class="card-img-wrapper">
-                  <img
-                    src="./src/images/products/test-product-6.png"
-                    alt=""
-                    class="card__img"
-                  />
-                </div>
-                <a href="" class="basic-link card__title">
-                  Аппарат для ручной вентиляции новорожденных, модель ТОМТУМБ
-                </a>
-                <p class="card__type">Реанимация новорожденных</p>
-              </div>
-            </div>
-            <button class="btn btn-show-more">Показать еще</button>
-          </div>
+        <div class="checkbox-text">
+          Даю свое согласие на обработку персональных данных
         </div>
-      </section>
-      <section class="about">
-        <div class="container about-container">
-          <div class="about-outer">
-            <h2 class="section-title about__title">
-              Сотрудничать с нами выгодно и удобно
-            </h2>
-            <div class="about-content">
-              <div class="about-card">
-                <img
-                  src="./src/images/equipment/about/1.png"
-                  alt=""
-                  class="about-card__img"
-                />
-                <div class="about-card__text">Цена ниже, чем у конкурентов</div>
-              </div>
-              <div class="about-card">
-                <img
-                  src="./src/images/equipment/about/2.png"
-                  alt=""
-                  class="about-card__img"
-                />
-                <div class="about-card__text">
-                  Бесплатная доставка по всей России
-                </div>
-              </div>
-              <div class="about-card">
-                <img
-                  src="./src/images/equipment/about/3.png"
-                  alt=""
-                  class="about-card__img"
-                />
-                <div class="about-card__text">
-                  Предоставляем рассрочку для госучреждений
-                </div>
-              </div>
-              <div class="about-card">
-                <img
-                  src="./src/images/equipment/about/4.png"
-                  alt=""
-                  class="about-card__img"
-                />
-                <div class="about-card__text">
-                  Обеспечиваем техническую поддержку
-                </div>
-              </div>
-              <div class="about-card">
-                <img
-                  src="./src/images/equipment/about/5.png"
-                  alt=""
-                  class="about-card__img"
-                />
-                <div class="about-card__text">
-                  Сопровождаем сделку на всех этапах: от консультациидо
-                  установки и обучения
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="requisites">
-  <div class="container requisites-container">
-    <div class="requisites-outer">
-      <div class="requisites__title">Наши реквизиты</div>
-      <a download href="./src/documents/organization-card.pdf">
-        <button class="btn btn-download-requisites">Скачать</button>
-      </a>
-    </div>
+      </label>
+      <button type="submit" class="btn btn-submit-tel btn-submit-tel-popUp">
+        Отправить
+      </button>
+    </form>
   </div>
-</section>
- <footer class="footer">
+</div>
+
+      <footer class="footer">
   <div class="container footer-container">
     <div class="footer-outer">
       <div class="footer-logo">

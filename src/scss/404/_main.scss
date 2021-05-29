@@ -59,10 +59,11 @@
   }
   &__img {
     position: absolute;
-    bottom: -15px;
+    bottom: -22px;
     left: 0;
     @include wh(428px, 428px);
     @media (max-width: $size-phone) {
+      bottom: -16px;
       @include wh(100%, 100%);
     }
   }

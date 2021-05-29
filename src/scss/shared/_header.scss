@@ -12,6 +12,14 @@
           &:first-of-type {
             margin-right: 47px;
           }
+          &:last-of-type {
+            @media (min-width: $size-laptop) {
+              transition: 0.1s;
+              &:hover {
+                color: $clr-blue;
+              }
+            }
+          }
           .info {
             &__img {
               margin-right: 2px;
@@ -42,6 +50,12 @@
             font-weight: 500;
             &:last-of-type {
               margin-right: 0;
+            }
+            @media (min-width: $size-laptop) {
+              transition: 0.1s;
+              &:hover {
+                color: $clr-blue;
+              }
             }
           }
         }

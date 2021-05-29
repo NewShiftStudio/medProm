@@ -47,6 +47,7 @@
   &-cart {
     max-width: 24px;
     padding: 0;
+    position: relative;
     &.mobile {
       @include flex();
       opacity: 0.3;
@@ -55,6 +56,20 @@
       .btn-cart__img {
         width: 100%;
       }
+    }
+    &-counter {
+      @include flex();
+      border-radius: 50%;
+      @include wh(20px, 20px);
+      background: $clr-orange;
+      position: absolute;
+      top: -10px;
+      right: -6px;
+      font-weight: bold;
+      font-size: 12px;
+      line-height: normal;
+      letter-spacing: -0.01em;
+      color: $clr-white;
     }
   }
   &-order,
@@ -69,6 +84,15 @@
     border-radius: 100px;
     font-weight: 600;
     font-size: 16px;
+    @media (min-width: $size-laptop) {
+      transition: 0.1s;
+      &:hover {
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.13);
+      }
+      &:active {
+        background: $clr-blue-pressed;
+      }
+    }
     @media (max-width: $size-phone) {
       font-size: 18px;
       letter-spacing: -0.01em;
@@ -80,19 +104,6 @@
   &-order-cart {
     @media (max-width: $size-phone) {
       @include wh(280px, 68px);
-    }
-  }
-  &-free-ship {
-    font-weight: bold;
-    color: $clr-dark;
-    line-height: 19px;
-    background: transparent;
-    letter-spacing: -0.01em;
-    margin-right: 30px;
-    border: 1px solid $clr-gray-2 !important;
-    @media (max-width: $size-phone) {
-      @include wh(280px, 68px);
-      margin: 0 0 15px;
     }
   }
   &-fill-form {
@@ -118,6 +129,7 @@
       letter-spacing: -0.01em;
     }
     &__arrow {
+      transition: 0.1s;
       @include wh(36px, 36px);
       @include flex();
       background: $clr-white;
@@ -125,6 +137,16 @@
       svg {
         @include wh(30px, 30px);
         stroke: $clr-blue;
+      }
+    }
+    @media (min-width: $size-laptop) {
+      &:hover {
+        .btn-more__arrow {
+          background: $clr-blue;
+          svg {
+            stroke: $clr-white;
+          }
+        }
       }
     }
   }
@@ -164,9 +186,23 @@
   }
   &-our-offer-arrow {
     @include flex();
-    @include wh(30px, 30px);
+    @include wh(36px, 36px);
     padding: 0 !important;
+    border-radius: 50%;
     margin: 0;
+    svg {
+      @include wh(30px, 30px);
+      stroke: $clr-blue;
+    }
+    @media (min-width: $size-laptop) {
+      &:hover {
+        background: $clr-blue;
+        svg {
+          @include wh(30px, 30px);
+          stroke: $clr-white;
+        }
+      }
+    }
   }
 
   &-download-requisites,
@@ -179,14 +215,21 @@
     letter-spacing: -0.01em;
     border-radius: 100px;
     color: $clr-blue;
-    @media (max-width: $size-phone) {
-    }
   }
   &-return {
     font-weight: 600;
     color: $clr-white;
     line-height: 19px;
     background: $clr-blue;
+    @media (min-width: $size-laptop) {
+      transition: 0.1s;
+      &:hover {
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.13);
+      }
+      &:active {
+        background: $clr-blue-pressed;
+      }
+    }
     @media (max-width: $size-phone) {
       @include wh(280px, 68px);
     }

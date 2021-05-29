@@ -91,6 +91,12 @@
     &:last-of-type {
       margin-bottom: 0;
     }
+    @media (min-width: $size-laptop) {
+      transition: 0.1s;
+      &:hover {
+        color: $clr-blue;
+      }
+    }
   }
   &-contacts {
     max-width: 300px;
@@ -110,6 +116,15 @@
         font-weight: 500;
         font-size: 14px;
         margin-bottom: 15px;
+      }
+      &-tel,
+      &-mail {
+        @media (min-width: $size-laptop) {
+          transition: 0.1s;
+          &:hover {
+            color: $clr-blue;
+          }
+        }
       }
       &-map,
       &-tel {
