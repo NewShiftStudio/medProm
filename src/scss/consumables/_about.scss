@@ -21,10 +21,10 @@
     margin-right: 60px;
     margin-bottom: 30px;
     @media (min-width: $size-laptop) {
-      &:nth-of-type(5) {
+      &:nth-last-of-type(2) {
         margin-bottom: 0;
       }
-      &:nth-of-type(6) {
+      &:last-of-type {
         margin-bottom: 0;
       }
     }
