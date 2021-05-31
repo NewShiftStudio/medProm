@@ -21,9 +21,6 @@
     margin-right: 60px;
     margin-bottom: 30px;
     @media (min-width: $size-laptop) {
-      &:nth-last-of-type(2) {
-        margin-bottom: 0;
-      }
       &:last-of-type {
         margin-bottom: 0;
       }
