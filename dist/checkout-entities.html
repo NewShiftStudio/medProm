@@ -8,10 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="./css/dental-hygiene/index.dental-hygiene.css"
-    />
+    <link rel="stylesheet" href="./css/checkout/index.checkout.css" />
     <title>МедПром</title>
   </head>
 
@@ -324,227 +321,175 @@
   </div>
 </header>
 
-      <section class="main">
-        <div class="container main-container">
-          <div class="main-outer">
-            <div class="router main-router">
+      <section class="checkout">
+        <div class="checkout-outer">
+          <div class="container checkout-container">
+            <div class="router checkout-router">
               <a class="router-selector">Главная</a>
               <div class="router-arrow">></div>
-              <a class="router-selector">Зубная гигена</a>
+              <a class="router-selector">Корзина</a>
             </div>
-            <h1 class="main__title">
-              Здоровая
-              <br />
-              и белоснежная улыбка
-              <br />
-              с профессиональными устройствами для зубной гигиены
-            </h1>
-          </div>
-        </div>
-      </section>
-      <section class="irregators">
-        <div class="container irregators-container">
-          <div class="irregators-outer">
-            <div class="irregators-content">
-              <h2 class="section-title irregators__title">Ирригаторы</h2>
-              <p class="irregators__subtitle">
-                Простое в использовании устройство для удаления налета и массажа
-                десен поможет поддерживать здоровье зубов в домашних условиях.
-              </p>
-              <button class="btn btn-more">
-                <span class="btn-more__text">Подробнее</span>
-                <div class="btn-more__arrow">
-                  <svg>
-                    <use href="./src/images/icons/sprite.svg#arrow-right"></use>
-                  </svg>
+            <h1 class="checkout__title">Оформление заказа</h1>
+            <form action="" class="checkout-form">
+              <div class="checkout-form__block checkout-form-personal-data">
+                <h3 class="checkout-form__title">Личные данные</h3>
+                <div class="checkout-form-input-blocks">
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Фамилия</div>
+                    <input
+                      placeholder="Иванов"
+                      type="text"
+                      class="block__input checkout-form-surname"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Имя</div>
+                    <input
+                      placeholder="Сергей"
+                      type="text"
+                      class="block__input checkout-form-name"
+                    />
+                  </div>
+                  <div
+                    class="
+                      checkout-form-input__block
+                      personal-data-input__block
+                    "
+                  >
+                    <div class="block__title">Отчество</div>
+                    <input
+                      placeholder="Витальевич"
+                      type="text"
+                      class="block__input checkout-form-patronymic"
+                    />
+                  </div>
                 </div>
-              </button>
-            </div>
-            <img
-              src="./src/images/dental-hygiene/irregator.png"
-              alt=""
-              class="irregators__img"
-            />
-          </div>
-        </div>
-      </section>
-      <section class="worth">
-        <div class="container worth-container">
-          <div class="worth-outer">
-            <h2 class="section-title worth__title">
-              Польза ирригаторов для ваших зубов
-            </h2>
-            <ul class="worth-list">
-              <li class="worth-list__item">Профилактика кариеса</li>
-              <li class="worth-list__item">Очищение труднодоступных мест</li>
-              <li class="worth-list__item">
-                Эффективная очистка брекет-систем и ортодонтических конструкций
-              </li>
-              <li class="worth-list__item">
-                Очистка языка и устранение неприятного запаха изо рта
-              </li>
-              <li class="worth-list__item">
-                Профилактика заболеваний десен (в том числе у курящих людей)
-              </li>
-              <li class="worth-list__item">
-                Быстрое заживление тканей после установки имплантатов
-              </li>
-              <li class="worth-list__item">
-                Уход за имплантатами, коронками и мостовидными протезами
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section class="toothbrushes">
-        <div class="container toothbrushes-container">
-          <div class="toothbrushes-outer">
-            <div class="toothbrushes-content">
-              <h2 class="section-title toothbrushes__title">Зубные щетки</h2>
-              <p class="toothbrushes__subtitle">
-                Профессиональные зубные щетки для качественной гигиены полости
-                рта.
-              </p>
-              <button class="btn btn-more">
-                <span class="btn-more__text">Подробнее</span>
-                <div class="btn-more__arrow">
-                  <svg>
-                    <use href="./src/images/icons/sprite.svg#arrow-right"></use>
-                  </svg>
+              </div>
+              <div class="checkout-form__block checkout-form-contacts">
+                <h3 class="checkout-form__title">Контакты</h3>
+                <div class="checkout-form-input-blocks">
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Номер телефона</div>
+                    <input
+                      placeholder="+7 (ххх) хх хх ххх"
+                      type="tel"
+                      class="block__input checkout-form-phone"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Email</div>
+                    <input
+                      placeholder="example@mail.ru"
+                      type="email"
+                      class="block__input checkout-form-mail"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    />
+                  </div>
                 </div>
+              </div>
+              <div class="checkout-form__block checkout-form-delivery">
+                <h3 class="checkout-form__title">Доставка</h3>
+                <div class="checkout-form-input-blocks">
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Город доставки</div>
+                    <input
+                      placeholder="Москва"
+                      type="text"
+                      class="block__input checkout-form-city"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Улица</div>
+                    <input
+                      placeholder="ул. Ленина"
+                      type="text"
+                      class="block__input checkout-form-street"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Номер дома</div>
+                    <input
+                      placeholder="16"
+                      type="number"
+                      class="block__input checkout-form-house"
+                      min="1"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Номер квартиры</div>
+                    <input
+                      placeholder="64"
+                      type="number"
+                      min="1"
+                      class="block__input checkout-form-apartment"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Комментарий</div>
+                    <textarea
+                      placeholder="Хотите чтобы курьер оповестил за час до доставки?"
+                      class="block__input checkout-form-comments"
+                    ></textarea>
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Вариант доставки</div>
+                    <div class="checkout-form-checkbox-wrapper">
+                      <input id="checkForm" class="checkbox" type="checkbox" />
+                      <div for="checkForm" class="checkbox-fake">
+                        <svg class="checkbox-check">
+                          <use
+                            href="../src/images/icons/sprite.svg#check"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div for="checkForm" class="checkbox-text">
+                        Почта России
+                      </div>
+                    </div>
+                    <div class="checkout-form-checkbox-wrapper">
+                      <input
+                        id="checkForm"
+                        class="checkbox"
+                        type="checkbox"
+                        checked
+                      />
+                      <div for="checkForm" class="checkbox-fake">
+                        <svg class="checkbox-check">
+                          <use
+                            href="../src/images/icons/sprite.svg#check"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div for="checkForm" class="checkbox-text">Курьер</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-form__block checkout-form-requisites">
+                <h3 class="checkout-form__title">Реквизиты</h3>
+                <label class="checkout-form-requisites-outer">
+                  <input
+                    placeholder="1"
+                    type="file"
+                    class="checkout-form-file"
+                  />
+                  <div class="checkout-form-requisites-wrapper">
+                    <span class="checkout-form-requisites-text">
+                      Мои реквизиты.jpg
+                    </span>
+                  </div>
+                  <button class="btn btn-checkout-form-requisites">
+                    Загрузить
+                  </button>
+                </label>
+              </div>
+              <button type="submit" class="btn btn-order-cart">
+                Оформить заказ
               </button>
-            </div>
-            <img
-              src="./src/images/dental-hygiene/toothbrush.png"
-              alt=""
-              class="toothbrushes__img"
-            />
+            </form>
           </div>
         </div>
       </section>
-      <section class="using">
-        <div class="container using-container">
-          <div class="using-outer">
-            <h2 class="section-title using__title">Как сделать заказ</h2>
-            <div class="using-cards">
-              <div class="using-card">
-                <div class="card__number">01.</div>
-                <h3 class="card__title">Выбор товара</h3>
-                <p class="card__text">
-                  Если появятся вопросы, наш консультант поможет с выбором
-                  оборудования и расходных материалов.
-                </p>
-              </div>
-              <div class="using-card">
-                <div class="card__number">02.</div>
-                <h3 class="card__title">Оформление заказа</h3>
-                <p class="card__text">
-                  О наличии товаров нужно уточнять у менеджера.
-                </p>
-              </div>
-              <div class="using-card">
-                <div class="card__number">03.</div>
-                <h3 class="card__title">Подтверждение заказа</h3>
-                <p class="card__text">
-                  Согласовываем с вами все детали и передаем заказ на сборку.
-                </p>
-              </div>
-              <div class="using-card">
-                <div class="card__number">04.</div>
-                <h3 class="card__title">Доставка</h3>
-                <p class="card__text">
-                  Бесплатная доставка в любой город России транспортной
-                  компанией со склада в Москве или Санкт-Петербурге.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="info">
-        <div class="container info-container">
-          <div class="info-outer">
-            <div class="info-cards">
-              <div class="info__card">
-                <h2 class="section-title card__title">Оплата и доставка</h2>
-                Все ирригаторы и зубные щетки мы доставляем по России за свой
-                счет.
-              </div>
-              <div class="info__card">
-                <h2 class="section-title card__title">Гарантии</h2>
-                <p class="card__subtitle">
-                  Гарантия на ирригаторы и зубные щетки —
-                  <strong>12 месяцев.</strong>
-                  Не действует в случаях, когда к поломке устройства привело
-                  неправильное использование.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="reviews">
-        <div class="reviews-outer">
-          <div class="container reviews-container">
-            <h2 class="section-title reviews__title">Отзывы</h2>
-            <div class="reviews-slider">
-              <div class="reviews__slide">
-                <div class="slide-content"></div>
-              </div>
-              <div class="reviews__slide">
-                <div class="slide-content"></div>
-              </div>
-              <div class="reviews__slide">
-                <div class="slide-content"></div>
-              </div>
-              <div class="reviews__slide">
-                <div class="slide-content"></div>
-              </div>
-              <div class="reviews__slide">
-                <div class="slide-content"></div>
-              </div>
-              <div class="reviews__slide">
-                <div class="slide-content"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="phone-form">
-  <div class="container phone-form-container">
-    <div class="phone-form-outer">
-      <div class="phone-form-inner">
-        <h2 class="section-title phone-form__title">Остались вопросы?</h2>
-        <div class="phone-form__subtitle">
-          Напишите нам и мы ответим на все ваши вопросы.
-        </div>
-        <form action="">
-          <div class="phone-form-input-wrapper">
-            <input placeholder="Ваш телефон" type="tel" class="tel-input" />
-            <button type="submit" class="btn btn-submit-tel">Отправить</button>
-          </div>
-          <div class="phone-form-checkbox-wrapper">
-            <input id="checkForm" class="checkbox" type="checkbox" />
-            <div for="checkForm" class="checkbox-fake">
-              <svg class="checkbox-check">
-                <use href="../src/images/icons/sprite.svg#check"></use>
-              </svg>
-            </div>
-            <label for="checkForm" class="checkbox-text">
-              Даю свое согласие на обработку персональных данных
-            </label>
-          </div>
-        </form>
-      </div>
-      <img
-        src="./src/images/home-page/form/doctor.png"
-        alt=""
-        class="phone-form__img"
-      />
-    </div>
-  </div>
-</section>
-
       <footer class="footer">
   <div class="container footer-container">
     <div class="footer-outer">
@@ -608,8 +553,5 @@
 
     </div>
     <script src="./js/burger.js"></script>
-    <script src="./js/tiny-slider.js"></script>
-    <script src="./js/validation.js"></script>
-    <script src="./js/dental-hygiene-slider.js"></script>
   </body>
 </html>

@@ -9,6 +9,10 @@ body {
     overflow: hidden;
   }
 }
+input,
+input::placeholder {
+  font-family: $font-inter;
+}
 *::placeholder {
   font-family: $font-inter;
 }

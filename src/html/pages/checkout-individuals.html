@@ -1,0 +1,173 @@
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/checkout/index.checkout.css" />
+    <title>МедПром</title>
+  </head>
+
+  <body>
+    <div class="global-container">
+      @@include('../parts/header.html')
+      <section class="checkout">
+        <div class="checkout-outer">
+          <div class="container checkout-container">
+            <div class="router checkout-router">
+              <a class="router-selector">Главная</a>
+              <div class="router-arrow">></div>
+              <a class="router-selector">Корзина</a>
+            </div>
+            <h1 class="checkout__title">Оформление заказа</h1>
+            <form action="" class="checkout-form">
+              <div class="checkout-form__block checkout-form-personal-data">
+                <h3 class="checkout-form__title">Личные данные</h3>
+                <div class="checkout-form-input-blocks">
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Фамилия</div>
+                    <input
+                      placeholder="Иванов"
+                      type="text"
+                      class="block__input checkout-form-surname"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Имя</div>
+                    <input
+                      placeholder="Сергей"
+                      type="text"
+                      class="block__input checkout-form-name"
+                    />
+                  </div>
+                  <div
+                    class="
+                      checkout-form-input__block
+                      personal-data-input__block
+                    "
+                  >
+                    <div class="block__title">Отчество</div>
+                    <input
+                      placeholder="Витальевич"
+                      type="text"
+                      class="block__input checkout-form-patronymic"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-form__block checkout-form-contacts">
+                <h3 class="checkout-form__title">Контакты</h3>
+                <div class="checkout-form-input-blocks">
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Номер телефона</div>
+                    <input
+                      placeholder="+7 (ххх) хх хх ххх"
+                      type="tel"
+                      class="block__input checkout-form-phone"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Email</div>
+                    <input
+                      placeholder="example@mail.ru"
+                      type="email"
+                      class="block__input checkout-form-mail"
+                      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="checkout-form__block checkout-form-delivery">
+                <h3 class="checkout-form__title">Доставка</h3>
+                <div class="checkout-form-input-blocks">
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Город доставки</div>
+                    <input
+                      placeholder="Москва"
+                      type="text"
+                      class="block__input checkout-form-city"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Улица</div>
+                    <input
+                      placeholder="ул. Ленина"
+                      type="text"
+                      class="block__input checkout-form-street"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Номер дома</div>
+                    <input
+                      placeholder="16"
+                      type="number"
+                      class="block__input checkout-form-house"
+                      min="1"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Номер квартиры</div>
+                    <input
+                      placeholder="64"
+                      type="number"
+                      min="1"
+                      class="block__input checkout-form-apartment"
+                    />
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Комментарий</div>
+                    <textarea
+                      placeholder="Хотите чтобы курьер оповестил за час до доставки?"
+                      class="block__input checkout-form-comments"
+                    ></textarea>
+                  </div>
+                  <div class="checkout-form-input__block">
+                    <div class="block__title">Вариант доставки</div>
+                    <div class="checkout-form-checkbox-wrapper">
+                      <input id="checkForm" class="checkbox" type="checkbox" />
+                      <div for="checkForm" class="checkbox-fake">
+                        <svg class="checkbox-check">
+                          <use
+                            href="../src/images/icons/sprite.svg#check"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div for="checkForm" class="checkbox-text">
+                        Почта России
+                      </div>
+                    </div>
+                    <div class="checkout-form-checkbox-wrapper">
+                      <input
+                        id="checkForm"
+                        class="checkbox"
+                        type="checkbox"
+                        checked
+                      />
+                      <div for="checkForm" class="checkbox-fake">
+                        <svg class="checkbox-check">
+                          <use
+                            href="../src/images/icons/sprite.svg#check"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div for="checkForm" class="checkbox-text">Курьер</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-order-cart">
+                Оформить заказ
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      @@include('../parts/footer.html')
+    </div>
+    <script src="./js/burger.js"></script>
+  </body>
+</html>
