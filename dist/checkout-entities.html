@@ -350,12 +350,7 @@
                       class="block__input checkout-form-name"
                     />
                   </div>
-                  <div
-                    class="
-                      checkout-form-input__block
-                      personal-data-input__block
-                    "
-                  >
+                  <div class="checkout-form-input__block">
                     <div class="block__title">Отчество</div>
                     <input
                       placeholder="Витальевич"
@@ -373,7 +368,8 @@
                     <input
                       placeholder="+7 (ххх) хх хх ххх"
                       type="tel"
-                      class="block__input checkout-form-phone"
+                      required
+                      class="tel-input block__input checkout-form-phone"
                     />
                   </div>
                   <div class="checkout-form-input__block">
@@ -381,6 +377,7 @@
                     <input
                       placeholder="example@mail.ru"
                       type="email"
+                      required
                       class="block__input checkout-form-mail"
                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                     />
@@ -395,12 +392,14 @@
                     <input
                       placeholder="Москва"
                       type="text"
+                      required
                       class="block__input checkout-form-city"
                     />
                   </div>
                   <div class="checkout-form-input__block">
                     <div class="block__title">Улица</div>
                     <input
+                      required
                       placeholder="ул. Ленина"
                       type="text"
                       class="block__input checkout-form-street"
@@ -409,33 +408,34 @@
                   <div class="checkout-form-input__block">
                     <div class="block__title">Номер дома</div>
                     <input
+                      required
                       placeholder="16"
                       type="number"
-                      class="block__input checkout-form-house"
+                      class="block__input adress checkout-form-house"
                       min="1"
                     />
                   </div>
                   <div class="checkout-form-input__block">
                     <div class="block__title">Номер квартиры</div>
                     <input
+                      required
                       placeholder="64"
                       type="number"
                       min="1"
-                      class="block__input checkout-form-apartment"
+                      class="block__input adress checkout-form-apartment"
                     />
                   </div>
                   <div class="checkout-form-input__block">
                     <div class="block__title">Комментарий</div>
                     <textarea
-                      placeholder="Вы можете указать здесь свои пожелания к заказу
-                      "
+                      placeholder="Вы можете указать здесь свои пожелания к заказу"
                       class="block__input checkout-form-comments"
                     ></textarea>
                   </div>
                   <div class="checkout-form-input__block">
                     <div class="block__title">Вариант доставки</div>
                     <div class="checkout-form-checkbox-wrapper">
-                      <input id="checkForm" class="checkbox" type="checkbox" />
+                      <input class="checkbox" type="checkbox" />
                       <div for="checkForm" class="checkbox-fake">
                         <svg class="checkbox-check">
                           <use
@@ -448,12 +448,7 @@
                       </div>
                     </div>
                     <div class="checkout-form-checkbox-wrapper">
-                      <input
-                        id="checkForm"
-                        class="checkbox"
-                        type="checkbox"
-                        checked
-                      />
+                      <input class="checkbox checked" type="checkbox" />
                       <div for="checkForm" class="checkbox-fake">
                         <svg class="checkbox-check">
                           <use
@@ -483,7 +478,7 @@
                   <input
                     placeholder="1"
                     type="file"
-                    class="checkout-form-file"
+                    class="block__input checkout-form-file"
                   />
                   <div class="checkout-form-requisites-wrapper">
                     <span class="checkout-form-requisites-filename">
@@ -572,5 +567,6 @@
 
     </div>
     <script src="./js/burger.js"></script>
+    <script src="./js/checkout-validation.js"></script>
   </body>
 </html>
