@@ -1,6 +1,8 @@
 .checkout {
   padding: 20px 0 80px 0;
-
+  @media (max-width: $size-phone) {
+    margin-top: 70px;
+  }
   &-form {
     &-file {
       position: absolute;
@@ -11,6 +13,38 @@
       @include maxwh(0, 0);
       top: 0;
     }
+    &-requisites__text {
+      max-width: 580px;
+      margin-bottom: 50px;
+      font-size: 16px;
+      line-height: 140%;
+      letter-spacing: -0.01em;
+      strong {
+        font-weight: 600;
+      }
+      @media (max-width: $size-phone) {
+        max-width: 100%;
+        font-size: 14px;
+        line-height: 140%;
+        letter-spacing: -0.01em;
+        margin-bottom: 20px;
+      }
+    }
+    &-requisites-filename {
+      text-overflow: ellipsis;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: -0.01em;
+      width: fit-content;
+      @media (max-width: $size-phone) {
+        line-height: 17px;
+        overflow: hidden;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: -0.01em;
+      }
+    }
     &-requisites-wrapper {
       @include wh(280px, 56px);
       background: $clr-gray;
@@ -18,8 +52,17 @@
       padding: 19px 15px 18px;
       opacity: 0.5;
       margin-right: 20px;
+      overflow: hidden;
+      text-overflow: ellipsis;
       &.active {
         display: block;
+      }
+      @media (max-width: $size-phone) {
+        padding: 10px 15px 10px;
+        border-radius: 100px;
+        @include wh(auto, auto);
+        min-width: 178px;
+        max-width: 210px;
       }
     }
     &-requisites-outer {
@@ -27,6 +70,9 @@
       width: fit-content;
       position: relative;
       @include flex(row, flex-start, flex-start);
+      @media (max-width: $size-phone) {
+        align-items: center;
+      }
     }
     &__title {
       padding-bottom: 10px;
@@ -35,11 +81,20 @@
       font-weight: 600;
       font-size: 24px;
       letter-spacing: -0.02em;
+      @media (max-width: $size-phone) {
+        margin-bottom: 40px;
+      }
     }
     &__block {
       margin-bottom: 60px;
       &:last-of-type {
         margin-bottom: 80px;
+      }
+      @media (max-width: $size-phone) {
+        margin-bottom: 80px;
+        &:last-of-type {
+          margin-bottom: 80px;
+        }
       }
     }
     &-delivery {
@@ -59,6 +114,14 @@
           }
           &::last-of-type {
             margin-right: 0;
+          }
+        }
+        @media (max-width: $size-phone) {
+          min-width: 100%;
+          margin-right: 0;
+          margin-bottom: 20px;
+          &:last-of-type {
+            margin-bottom: 0;
           }
         }
         .block__input {
@@ -88,11 +151,18 @@
       @include wh(580px, 168px);
       @include minwh(580px, 168px);
       resize: none;
+      @media (max-width: $size-phone) {
+        @include wh(100%, 168px);
+        @include minwh(100%, 168px);
+      }
     }
     &-checkbox-wrapper {
       position: relative;
       margin-top: 30px;
       &:last-of-type {
+        margin-top: 20px;
+      }
+      @media (max-width: $size-phone) {
         margin-top: 20px;
       }
       width: fit-content;
@@ -141,6 +211,9 @@
   &-router {
     color: $clr-dark;
     margin-bottom: 44px;
+    @media (max-width: $size-phone) {
+      display: none;
+    }
   }
   &__title {
     font-weight: bold;
@@ -148,5 +221,11 @@
     line-height: 56px;
     color: $clr-dark;
     margin-bottom: 60px;
+    @media (max-width: $size-phone) {
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: -0.02em;
+      color: #2d2d30;
+    }
   }
 }

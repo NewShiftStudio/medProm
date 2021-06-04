@@ -108,6 +108,22 @@
     @include flex();
     border-radius: 0;
     @include wh(150px, 56px);
+    &__img {
+      display: none;
+    }
+    @media (max-width: $size-phone) {
+      @include wh(37px, 37px);
+      @include flex();
+      border-radius: 50%;
+      &__text {
+        display: none;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &__img {
+        display: block;
+      }
+    }
   }
   &-show-more {
     margin: 0 auto;

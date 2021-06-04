@@ -427,7 +427,8 @@
                   <div class="checkout-form-input__block">
                     <div class="block__title">Комментарий</div>
                     <textarea
-                      placeholder="Хотите чтобы курьер оповестил за час до доставки?"
+                      placeholder="Вы можете указать здесь свои пожелания к заказу
+                      "
                       class="block__input checkout-form-comments"
                     ></textarea>
                   </div>
@@ -467,6 +468,17 @@
               </div>
               <div class="checkout-form__block checkout-form-requisites">
                 <h3 class="checkout-form__title">Реквизиты</h3>
+                <p class="checkout-form-requisites__text">
+                  Прикрепите карточку организации с реквизитами, чтобы мы могли
+                  выставить счет. Вы можете добавить 1 файл размером не более 5
+                  мб. в следующих форматах:
+                  <strong>.pdf,</strong>
+                  <strong>.jpg,</strong>
+                  <strong>.png,</strong>
+                  <strong>.docx</strong>
+                  или
+                  <strong>.rtf</strong>
+                </p>
                 <label class="checkout-form-requisites-outer">
                   <input
                     placeholder="1"
@@ -474,12 +486,19 @@
                     class="checkout-form-file"
                   />
                   <div class="checkout-form-requisites-wrapper">
-                    <span class="checkout-form-requisites-text">
+                    <span class="checkout-form-requisites-filename">
                       Мои реквизиты.jpg
                     </span>
                   </div>
                   <button class="btn btn-checkout-form-requisites">
-                    Загрузить
+                    <span class="btn-checkout-form-requisites__text">
+                      Загрузить
+                    </span>
+                    <img
+                      src="./src/images/icons/load-file.svg"
+                      class="btn-checkout-form-requisites__img"
+                      alt=""
+                    />
                   </button>
                 </label>
               </div>
