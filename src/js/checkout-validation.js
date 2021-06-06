@@ -109,15 +109,12 @@ function onAdressInput() {
   setInputColor(adressInput, testAdress(adressInput.value))
 }
 function checkAdresses() {
-  let state = false
-  adresses.forEach((adress) => {
-    if (testAdress(adress.value)) {
-      state = true
-    } else {
-      state = false
+  for (const adress of adresses) {
+    if (!testAdress(adress.value)) {
+      return false
     }
-  })
-  return state
+  }
+  return true
 }
 adresses.forEach((adress) => {
   initAdressesListeners(adress)
@@ -153,7 +150,6 @@ if (fileInput) {
       if (filenameN.indexOf('\\') === 0 || filenameN.indexOf('/') === 0) {
         filenameN = filenameN.substring(1)
       }
-      console.log(filenameN)
       fileName.innerHTML = filenameN
     }
   })
@@ -162,29 +158,24 @@ const orderBtn = document.querySelector('.btn-order-cart')
 const allInputs = document.querySelectorAll('.block__input')
 
 function checkAllInputs() {
-  let state = false
-  allInputs.forEach((input) => {
-    console.log(input)
-    console.log(input.value)
-    if (input.value) {
-      console.log('YESSS')
-      state = true
-    } else {
-      state = false
+  for (const input of allInputs) {
+    if (!input.value) {
+      return false
     }
-  })
-  return state
+  }
+  return true
 }
 function checkAll() {
-  if (checkAdresses() && checkMail() && checkAllInputs()) {
-    return true
-  } else return false
+  if (!(checkAllInputs() && checkAdresses() && checkMail())) {
+    return false
+  }
+  return true
 }
 orderBtn.addEventListener('click', (e) => {
   e.preventDefault()
   if (checkAll()) {
     alert('Форма отправлена')
   } else {
-    alert('Проверьте валидность адреса и почты')
+    alert('Проверьте правильность ввода данных')
   }
 })
