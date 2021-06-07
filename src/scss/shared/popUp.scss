@@ -8,6 +8,41 @@
   border-radius: 20px;
   width: 600px;
   position: relative;
+  .popUp_sended {
+    display: none;
+  }
+  &.sended {
+    padding: 120px 20px 256px;
+    .popUp_sended {
+      @include flex(column);
+      &__icon {
+        @include flex();
+        @include wh(90px, 90px);
+        margin-bottom: 40px;
+        @media (max-width: $size-phone) {
+          @include wh(60px, 60px);
+          margin-bottom: 20px;
+        }
+      }
+      &__text {
+        max-width: 470px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+        letter-spacing: -0.02em;
+        @media (max-width: $size-phone) {
+          max-width: 100%;
+          font-size: 27px;
+          line-height: 33px;
+        }
+      }
+    }
+
+    .popUp-default {
+      display: none;
+    }
+  }
   @media (max-width: $size-phone) {
     border-radius: 0;
     width: 100vw;
@@ -18,7 +53,8 @@
     z-index: 10;
     padding: 20px 20px;
   }
-  &-inner {
+  &-inner,
+  &-default {
     z-index: 10;
     overflow: visible;
     width: 100%;

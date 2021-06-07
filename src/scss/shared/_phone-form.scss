@@ -13,6 +13,50 @@
       font-size: 30px;
     }
   }
+  &_sended {
+    display: none;
+  }
+  &.sended {
+    @media (max-width: $size-phone) {
+      .phone-form-outer {
+        padding: 60px 10px 0;
+        height: 335px;
+        @include flex(column, flex-start, center);
+      }
+    }
+    .phone-form-inner {
+      display: none;
+    }
+    .phone-form_sended {
+      @include flex(column, flex-start, flex-start);
+      @media (max-width: $size-phone) {
+        @include flex(column, flex-start, center);
+        width: 100%;
+      }
+      &__icon {
+        @include flex();
+        @include wh(60px, 60px);
+        margin-bottom: 30px;
+        @media (max-width: $size-phone) {
+          @include wh(60px, 60px);
+          margin-bottom: 20px;
+        }
+      }
+      &__text {
+        max-width: 470px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        letter-spacing: -0.02em;
+        @media (max-width: $size-phone) {
+          max-width: 280px;
+          font-size: 27px;
+          text-align: center;
+          line-height: 33px;
+        }
+      }
+    }
+  }
   &__subtitle {
     margin-bottom: 40px;
     font-size: 16px;

@@ -5,33 +5,51 @@
         <use href="../src/images/icons/sprite.svg#close"></use>
       </svg>
     </button>
-    <h2 class="section-title popUp__title">Бесплатная доставка</h2>
-    <p class="popUp__subtitle">
-      Заполните эту форму и ваши покупки из раздела зубной гигиены мы отправим
-      бесплатно.
-    </p>
-    <form class="popUp-form" action="">
-      <input placeholder="Имя" type="name" class="name-input-popUp" />
-      <input placeholder="E-mail" type="email" class="mail-input-popUp" />
-      <input
-        placeholder="Номер телефона"
-        type="tel"
-        class="tel-input tel-input-popUp"
-      />
-      <label class="home-checkbox popUp-checkbox-wrapper">
-        <input class="checkbox" type="checkbox" />
-        <div class="checkbox-fake">
-          <svg class="checkbox-check">
-            <use href="../src/images/icons/sprite.svg#check"></use>
-          </svg>
-        </div>
-        <div class="checkbox-text">
-          Даю свое согласие на обработку персональных данных
-        </div>
-      </label>
-      <button type="submit" class="btn btn-submit-tel btn-submit-tel-popUp">
-        Отправить
-      </button>
-    </form>
+    <div class="popUp-default">
+      <h2 class="section-title popUp__title">Бесплатная доставка</h2>
+      <p class="popUp__subtitle">
+        Заполните эту форму и ваши покупки из раздела зубной гигиены мы отправим
+        бесплатно.
+      </p>
+      <form class="popUp-form" action="">
+        <input
+          placeholder="Имя"
+          type="name"
+          class="popUp-input name-input-popUp"
+        />
+        <input
+          placeholder="E-mail"
+          type="email"
+          class="popUp-input mail-input-popUp"
+        />
+        <input
+          placeholder="Номер телефона"
+          type="tel"
+          class="popUp-input tel-input-popUp"
+        />
+        <label class="home-checkbox popUp-checkbox-wrapper">
+          <input class="popUp-input checkbox" type="checkbox" />
+          <div class="checkbox-fake">
+            <svg class="checkbox-check">
+              <use href="../src/images/icons/sprite.svg#check"></use>
+            </svg>
+          </div>
+          <div class="checkbox-text">
+            Даю свое согласие на обработку персональных данных
+          </div>
+        </label>
+        <button type="submit" class="btn btn-submit-tel btn-submit-tel-popUp">
+          Отправить
+        </button>
+      </form>
+    </div>
+    <div class="popUp_sended">
+      <svg class="popUp_sended__icon">
+        <use href="./src/images/icons/sprite.svg#sended-ok"></use>
+      </svg>
+      <div class="popUp_sended__text">
+        Мы получили вашу заявку и скоро перезвоним
+      </div>
+    </div>
   </div>
 </div>

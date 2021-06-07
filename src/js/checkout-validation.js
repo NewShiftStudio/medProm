@@ -68,114 +68,115 @@ document.addEventListener('DOMContentLoaded', function () {
     phoneInput.addEventListener('input', onPhoneInput, false)
     phoneInput.addEventListener('paste', onPhonePaste, false)
   }
-})
-function setInputColor(input, state) {
-  if (state) {
-    input.style.border = '1px solid #23DC3D'
-  } else {
-    input.style.border = '1px solid tomato'
-  }
-}
-//mail
-const mailInput = document.querySelector('.checkout-form-mail')
-const mailMask =
-  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-function testEmail(email) {
-  return mailMask.test(email)
-}
-function initMailListeners(mailInput) {
-  mailInput.addEventListener('input', onMailInput)
-}
-function onMailInput() {
-  setInputColor(mailInput, testEmail(mailInput.value))
-}
-function checkMail() {
-  return testEmail(mailInput.value)
-}
-initMailListeners(mailInput)
 
-//adress
-const adresses = document.querySelectorAll('.adress')
-function testAdress(number) {
-  if (number > 0) {
-    return true
-  } else return false
-}
-function initAdressesListeners(adress) {
-  adress.addEventListener('input', onAdressInput)
-}
-function onAdressInput() {
-  const adressInput = this
-  setInputColor(adressInput, testAdress(adressInput.value))
-}
-function checkAdresses() {
-  for (const adress of adresses) {
-    if (!testAdress(adress.value)) {
-      return false
+  function setInputColor(input, state) {
+    if (state) {
+      input.style.border = '1px solid #23DC3D'
+    } else {
+      input.style.border = '1px solid tomato'
     }
   }
-  return true
-}
-adresses.forEach((adress) => {
-  initAdressesListeners(adress)
-})
+  //mail
+  const mailInput = document.querySelector('.checkout-form-mail')
+  const mailMask =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  function testEmail(email) {
+    return mailMask.test(email)
+  }
+  function initMailListeners(mailInput) {
+    mailInput.addEventListener('input', onMailInput)
+  }
+  function onMailInput() {
+    setInputColor(mailInput, testEmail(mailInput.value))
+  }
+  function checkMail() {
+    return testEmail(mailInput.value)
+  }
+  initMailListeners(mailInput)
 
-//checkboxes
-const checkboxes = document.querySelectorAll('.checkbox')
-function initCheckboxesListeners(checkbox) {
-  checkbox.addEventListener('click', onCheckboxInput)
-}
-function onCheckboxInput() {
-  checkboxes.forEach((checkbox) => {
-    checkbox.classList.remove('checked')
-  })
-  this.classList.add('checked')
-}
-checkboxes.forEach((checkbox) => {
-  initCheckboxesListeners(checkbox)
-})
-
-//file
-const fileInput = document.querySelector('.checkout-form-file')
-const fileName = document.querySelector('.checkout-form-requisites-filename')
-if (fileInput) {
-  fileInput.addEventListener('input', (e) => {
-    var fullPath = fileInput.value
-    if (fullPath) {
-      var startIndex =
-        fullPath.indexOf('\\') >= 0
-          ? fullPath.lastIndexOf('\\')
-          : fullPath.lastIndexOf('/')
-      var filenameN = fullPath.substring(startIndex)
-      if (filenameN.indexOf('\\') === 0 || filenameN.indexOf('/') === 0) {
-        filenameN = filenameN.substring(1)
+  //adress
+  const adresses = document.querySelectorAll('.adress')
+  function testAdress(number) {
+    if (number > 0) {
+      return true
+    } else return false
+  }
+  function initAdressesListeners(adress) {
+    adress.addEventListener('input', onAdressInput)
+  }
+  function onAdressInput() {
+    const adressInput = this
+    setInputColor(adressInput, testAdress(adressInput.value))
+  }
+  function checkAdresses() {
+    for (const adress of adresses) {
+      if (!testAdress(adress.value)) {
+        return false
       }
-      fileName.innerHTML = filenameN
     }
+    return true
+  }
+  adresses.forEach((adress) => {
+    initAdressesListeners(adress)
   })
-}
-const orderBtn = document.querySelector('.btn-order-cart')
-const allInputs = document.querySelectorAll('.block__input')
 
-function checkAllInputs() {
-  for (const input of allInputs) {
-    if (!input.value) {
+  //checkboxes
+  const checkboxes = document.querySelectorAll('.checkbox')
+  function initCheckboxesListeners(checkbox) {
+    checkbox.addEventListener('click', onCheckboxInput)
+  }
+  function onCheckboxInput() {
+    checkboxes.forEach((checkbox) => {
+      checkbox.classList.remove('checked')
+    })
+    this.classList.add('checked')
+  }
+  checkboxes.forEach((checkbox) => {
+    initCheckboxesListeners(checkbox)
+  })
+
+  //file
+  const fileInput = document.querySelector('.checkout-form-file')
+  const fileName = document.querySelector('.checkout-form-requisites-filename')
+  if (fileInput) {
+    fileInput.addEventListener('input', (e) => {
+      var fullPath = fileInput.value
+      if (fullPath) {
+        var startIndex =
+          fullPath.indexOf('\\') >= 0
+            ? fullPath.lastIndexOf('\\')
+            : fullPath.lastIndexOf('/')
+        var filenameN = fullPath.substring(startIndex)
+        if (filenameN.indexOf('\\') === 0 || filenameN.indexOf('/') === 0) {
+          filenameN = filenameN.substring(1)
+        }
+        fileName.innerHTML = filenameN
+      }
+    })
+  }
+  const orderBtn = document.querySelector('.btn-order-cart')
+  const allInputs = document.querySelectorAll('.block__input')
+
+  function checkAllInputs() {
+    for (const input of allInputs) {
+      if (!input.value) {
+        return false
+      }
+    }
+    return true
+  }
+  function checkAll() {
+    if (!(checkAllInputs() && checkAdresses() && checkMail())) {
       return false
     }
+    return true
   }
-  return true
-}
-function checkAll() {
-  if (!(checkAllInputs() && checkAdresses() && checkMail())) {
-    return false
-  }
-  return true
-}
-orderBtn.addEventListener('click', (e) => {
-  e.preventDefault()
-  if (checkAll()) {
-    alert('Форма отправлена')
-  } else {
-    alert('Проверьте правильность ввода данных')
-  }
+  orderBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    if (checkAll()) {
+      alert('Форма отправлена')
+    } else {
+      alert('Проверьте правильность ввода данных')
+    }
+  })
 })

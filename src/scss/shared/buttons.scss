@@ -263,10 +263,18 @@
   }
   &-close-popUp {
     position: absolute;
+    z-index: 11;
     right: 20px;
     top: 20px;
+    color: black;
+    stroke: black;
+    fill: black;
     svg {
       @include wh(30px, 30px);
+    }
+    @media (max-width: $size-phone) {
+      right: 10px;
+      top: 10px;
     }
   }
   &-remove-filter {

@@ -520,11 +520,19 @@
         </div>
         <form action="">
           <div class="phone-form-input-wrapper">
-            <input placeholder="Ваш телефон" type="tel" class="tel-input" />
+            <input
+              placeholder="Ваш телефон"
+              type="tel"
+              class="tel-input phone-form-input phone-form-tel-input"
+            />
             <button type="submit" class="btn btn-submit-tel">Отправить</button>
           </div>
           <div class="phone-form-checkbox-wrapper">
-            <input id="checkForm" class="checkbox" type="checkbox" />
+            <input
+              id="checkForm"
+              class="checkbox phone-form-input"
+              type="checkbox"
+            />
             <div for="checkForm" class="checkbox-fake">
               <svg class="checkbox-check">
                 <use href="../src/images/icons/sprite.svg#check"></use>
@@ -535,6 +543,14 @@
             </label>
           </div>
         </form>
+      </div>
+      <div class="phone-form_sended">
+        <svg class="phone-form_sended__icon">
+          <use href="./src/images/icons/sprite.svg#sended-ok"></use>
+        </svg>
+        <div class="phone-form_sended__text">
+          Мы получили вашу заявку и скоро перезвоним
+        </div>
       </div>
       <img
         src="./src/images/home-page/form/doctor.png"
@@ -609,7 +625,7 @@
     </div>
     <script src="./js/burger.js"></script>
     <script src="./js/tiny-slider.js"></script>
-    <script src="./js/validation.js"></script>
+    <script src="./js/phone-form.js"></script>
     <script src="./js/dental-hygiene-slider.js"></script>
   </body>
 </html>
