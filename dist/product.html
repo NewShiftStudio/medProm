@@ -340,13 +340,49 @@
               </div>
               <div class="product-card-wrapper">
                 <div class="product-card_top">
-                  <div class="product-card_top-img-wrapper">
-                    <img
-                      src="./src/images/products/test-product-3.png"
-                      alt=""
-                      class="product-card_top__img"
-                    />
+                  <div class="product-card-slider-wrapper">
+                    <div class="product-card-slider__controls">
+                      <div class="prev">
+                        <svg class="prev-svg">
+                          <use
+                            href="../src/images/icons/sprite.svg#arrow-right"
+                          ></use>
+                        </svg>
+                      </div>
+                      <div class="next">
+                        <svg class="next-svg">
+                          <use
+                            href="../src/images/icons/sprite.svg#arrow-right"
+                          ></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="product-card-slider">
+                      <div class="product-card__slide">
+                        <img
+                          src="./src/images/products/test-product-3.png"
+                          alt=""
+                          class="product-card__slide__img"
+                        />
+                      </div>
+                      <div class="product-card__slide">
+                        <img
+                          src="./src/images/products/test-product-3.png"
+                          alt=""
+                          class="product-card__slide__img"
+                        />
+                      </div>
+                      <div class="product-card__slide">
+                        <img
+                          src="./src/images/products/test-product-5.png"
+                          alt=""
+                          class="product-card__slide__img"
+                        />
+                      </div>
+                    </div>
+                    <div class="product-card-pages"></div>
                   </div>
+
                   <div class="product-card_top-text">
                     <h1 class="page-title product-card_top__title">
                       Фетальные кардиомониторы Team Care / Care Duo
@@ -1056,6 +1092,6 @@
     <script src="./js/burger.js"></script>
     <script src="./js/product.js"></script>
     <script src="./js/tiny-slider.js"></script>
-    <script src="./js/history-slider.js"></script>
+    <script src="./js/product-sliders.js"></script>
   </body>
 </html>
