@@ -59,16 +59,17 @@
       @include flex($justify: space-between);
       position: absolute;
       height: 36px;
-      left: -72px;
-      width: calc(100% + 144px);
+      left: 0;
+      width: calc(100%);
       top: calc(50% - 18px);
       @media (max-width: $size-phone) {
         width: calc(100% + 30px);
-        left: -15px;
+        left: 0;
         top: 82px;
       }
       .next,
       .prev {
+        background: white;
         cursor: pointer;
         @include flex();
         @include maxwh(36px, 36px);
