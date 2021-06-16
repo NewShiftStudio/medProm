@@ -63,7 +63,6 @@
       width: calc(100%);
       top: calc(50% - 18px);
       @media (max-width: $size-phone) {
-        width: calc(100% + 30px);
         left: 0;
         top: 82px;
       }

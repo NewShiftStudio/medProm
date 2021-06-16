@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     navContainer: '.product-card-pages',
     nested: 'inner',
     controls: true,
+    gutter: 10,
     loop: false,
     center: true,
     center: true,
