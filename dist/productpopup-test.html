@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/popup-test/index.popup-test.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/productpopup-test/index.productPopUp.css" />
     <title>МедПром</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <div class="global-container">
-      <header class="header">
+        <header class="header">
   <div class="header-outer">
     <div class="header-blocks">
       <div class="header-upper__block">
@@ -321,50 +320,31 @@
     </div>
   </div>
 </header>
- <div class="popUp">
-  <div class="popUp-inner">
-    <button class="btn btn-close-popUp">
-      <svg>
-        <use href="../src/images/icons/sprite.svg#close"></use>
-      </svg>
-    </button>
-    <div class="popUp-default">
-      <h2 class="section-title popUp__title">Бесплатная доставка</h2>
-      <p class="popUp__subtitle">
-        Заполните эту форму и ваши покупки из раздела зубной гигиены мы отправим
-        бесплатно.
-      </p>
-      <form class="popUp-form" action="">
-        <input placeholder="Имя" type="name" class="popUp-input name-input-popUp" />
-        <input placeholder="E-mail" type="email" class="popUp-input mail-input-popUp" />
-        <input placeholder="Номер телефона" type="tel" class="popUp-input tel-input-popUp" />
-        <label class="home-checkbox popUp-checkbox-wrapper">
-          <input class="popUp-input checkbox" type="checkbox" />
-          <div class="checkbox-fake">
-            <svg class="checkbox-check">
-              <use href="../src/images/icons/sprite.svg#check"></use>
-            </svg>
-          </div>
-          <div class="checkbox-text">
-            Даю свое согласие на обработку персональных данных
-          </div>
-        </label>
-        <button type="submit" class="btn btn-submit-tel btn-submit-tel-popUp">
-          Отправить
-        </button>
-      </form>
+
+        <div class="productPopUp">
+    <div class="productPopUp__title">
+        <h3>Товар добавлен</h3>
     </div>
-    <div class="popUp_sended">
-      <svg class="popUp_sended__icon">
-        <use href="./src/images/icons/sprite.svg#sended-ok"></use>
-      </svg>
-      <div class="popUp_sended__text">
-        Мы получили вашу заявку и скоро перезвоним
-      </div>
+
+    <div class="productPopUp__info">
+        <div class="productPopUp__img">
+            <img src="./src/images/productPopUp/back.png" alt="">
+        </div>
+        <div class="productPopUp__subTitle">
+            <p>Кресло гинекологическое КГ-409-МСК</p>
+        </div>
+        <div class="productPopUp__description">
+            <p>Гинекологические кресла</p>
+        </div>
     </div>
-  </div>
+
+    <div class="productPopUp__buttons">
+        <button class="productPopUp__button productPopUp__button-secondary">В корзину</button>
+        <button class="productPopUp__button">Продолжить покупки</button>
+    </div>
+
 </div>
-      <footer class="footer">
+        <footer class="footer">
   <div class="container footer-container">
     <div class="footer-outer">
       <div class="footer-logo">
@@ -428,5 +408,6 @@
     </div>
     <script src="./js/burger.js"></script>
     <script src="./js/popUp.js"></script>
-  </body>
+</body>
+
 </html>
