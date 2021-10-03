@@ -2,127 +2,134 @@
 @import "../shared/variables.scss";
 
 .productPopUp {
-    padding: 60px 0;
-    width: 600px;
+  padding: 60px 0;
+  width: 600px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #ffffff;
+
+  @media (max-width: $size-phone) {
+    width: 300px;
+  }
+
+  &__title {
+    h3 {
+      font-family: $font-inter;
+      font-weight: bold;
+      font-size: 36px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: $clr-dark;
+    }
+  }
+
+  &__info {
+    width: 270px;
+
+    margin: 40px 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
-    box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
-
-    z-index: 5;
 
     @media (max-width: $size-phone) {
-        width: 300px;
+      margin: 30px 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+
+    object-fit: cover;
+  }
+
+  &__subTitle {
+    margin: 15px 0 5px 0;
+    p {
+      text-align: left;
+      font-family: $font-inter;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: -0.02em;
+
+      color: $clr-black;
+    }
+  }
+
+  &__description {
+    width: 100%;
+    p {
+      font-family: $font-inter;
+
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      color: $clr-gray-3;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+
+    @media (max-width: $size-phone) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    margin: 0 20px 0 0;
+    padding: 15px 30px;
+
+    font-family: $font-inter;
+
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+
+    background-color: $clr-blue;
+
+    border: none;
+
+    border-radius: 100px;
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: all 0.15s ease;
+
+    @media (max-width: $size-phone) {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 20px 0;
     }
 
-    &__title {
-        h3 {
-            font-family: $font-inter;
-            font-weight: bold;
-            font-size: 36px;
-            text-align: center;
-            letter-spacing: -0.02em;
-            color: $clr-dark;
-        }
+    &:hover {
+      background-color: $clr-blue-pressed;
     }
 
-    &__info {
-        width: 270px;
+    &-secondary {
+      color: $clr-black;
+      background-color: $clr-gray;
 
-        margin: 40px 0;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        @media (max-width: $size-phone) {
-            margin: 30px 0;
-        }
+      &:hover {
+        background-color: $clr-gray-2;
+      }
     }
-
-    &__img {
-        width: 100%;
-
-        object-fit: cover;
-    }
-
-    &__subTitle {
-        margin: 15px 0 5px 0;
-        p {
-            font-family: $font-inter;
-            font-weight: 600;
-            font-size: 16px;
-            letter-spacing: -0.02em;
-
-            color: $clr-black;
-        }
-    }
-
-    &__description {
-        width: 100%;
-        p {
-            font-family: $font-inter;
-
-            font-size: 14px;
-            letter-spacing: -0.01em;
-            color: $clr-gray-3;
-        }
-    }
-
-    &__buttons {
-        display: flex;
-
-        @media (max-width: $size-phone) {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-    &__button {
-        margin: 0 20px 0 0;
-        padding: 15px 30px;
-
-        font-family: $font-inter;
-
-        font-weight: bold;
-        font-size: 16px;
-        letter-spacing: -0.01em;
-
-        background-color: $clr-blue;
-
-        border: none;
-
-        border-radius: 100px;
-
-        color: #ffffff;
-
-        cursor: pointer;
-
-        transition: all 0.15s ease;
-
-        @media (max-width: $size-phone) {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 0 20px 0;
-        }
-
-        &:hover {
-            background-color: $clr-blue-pressed;
-        }
-
-        &-secondary {
-            color: $clr-black;
-            background-color: $clr-gray;
-
-            &:hover {
-                background-color: $clr-gray-2;
-            }
-        }
-    }
+  }
 }
